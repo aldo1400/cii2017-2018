@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+  head
+    title CIIS | TACNA
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='images/icons/favicon.html')
+    link(rel='apple-touch-icon', href='images/icons/favicon-2.html')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css')
+    link(rel='stylesheet', href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css')
+      
+
+    // Loading bootstrap css
+    link(type='text/css', rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')
+    link(type='text/css', rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oswald:400,700,300')
+
+    // LOADING STYLESHEET FOR PAGE
+
+  body
+    br
+    .col-lg-12
+        .portlet.box
+            .portlet-header
+                .caption USUARIOS
+            .portlet-body
+                .row.mbm
+                    .col-lg-12
+                        .table-responsive
+                            button.btn.btn-success(type='button', data-toggle='modal', data-target='#createUserModal') Crear Usuario
+                            //#codeqr(width="200" height="200")
+                        br
+                        .table-responsive
+                             table#lista_usuarios.table.table-bordered.dataTable(width='100%', cellspacing='0', role='grid', aria-describedby='dataTable_info', style='width: 100%;')
+                                thead
+                                    tr(role='row')
+                                    th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 20px;') Orden
+                                    th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 152px;') Nombre
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Position: activate to sort column ascending', style='width: 138px;') Apellido
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Office: activate to sort column ascending', style='width: 80px;') Email
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Age: activate to sort column ascending', style='width: 49px;') DNI
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Start date: activate to sort column ascending', style='width: 66px;') Fecha registro
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 75px;') Deuda
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 75px;') Asistencia
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 280px;') Actions
+
+                                tbody
+                                  each user in users 
+                                     tr
+                                        td #{user.user._id}
+                                        td #{user.user.name}
+                                        td #{user.user.lastname}
+                                        td #{user.user.email}
+                                        td #{user.user.dni}
+                                        td #{user.user.createdAt}
+                                        td #{user.user.debt}
+                                        td #{user.assist}              
+        // END FOOTER
+        // END PAGE WRAPPER
+    script(src='js/asistencia/jquery-1.10.2.min.js')
+    script(src='js/asistencia/jquery-migrate-1.2.1.min.js')
+    script(src='js/asistencia/jquery-ui.js')
+    
+    script(src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js')
+    
+    //script(src='js/asistencia/qrcode.min.js')
+
+    script.
+      $(document).ready(function() {
+          $("#lista_usuarios").DataTable({
+          })
+      } );

@@ -1,0 +1,23 @@
+#resumeModal.modal.fade(role='dialog')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Resumen
+        button#closeResume.close(type='button', data-dismiss='modal') ×
+      .modal-body
+        .row
+            .col-md-6
+                .form-group
+                    label(for='pwd') Pagos:
+                    input#paymentResume.form-control(type='',disabled)
+            .col-md-6
+                .form-group
+                    label(for='pwd') Deuda:
+                    input#debtResume.form-control(type='',disabled)
+            .col-md-6
+                .form-group
+                    label(for='pwd') Total:
+                    input#totalResume.form-control(type='',disabled)
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        

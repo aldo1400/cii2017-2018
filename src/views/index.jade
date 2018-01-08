@@ -1,0 +1,1058 @@
+extends layout
+
+block content
+
+    #loader.spinner
+      .double-bounce1
+      .double-bounce2
+    #myDiv.animate-bottom(style='display:none;')
+      header
+        nav.navigation
+          #logo
+            //-a.ciis-logo-link(href='/')            
+            //- img.nav-logo(src='img/logo.png', alt='')
+            img.nav-logo(src='img/logoo.png', alt='')            
+            
+            p.items.header-subtitle.nav-items CONGRESO INTERNACIONAL                            
+            p.items.header-subtitle2.nav-items DE INFORMÁTICA Y SISTEMAS
+            
+          // <div id="logo">Your Logo here</div>
+          label.toggle(for='drop') Menú
+          input#drop(type='checkbox')
+          ul#menu.menu
+            li
+              a(data-scroll='', href='#index') Inicio
+            li
+              a(data-scroll='', href='#linea-investigacion') Ejes temáticos
+            li
+              a(data-scroll='', href='#inversion') Inversión
+            li
+              a(data-scroll='', href='#team') Ponentes
+            li
+              a(data-scroll='', href='#talleres') Talleres              
+            li
+              a(data-scroll='', href='#cronograma') Cronograma
+            li
+              a#contactBtn(href='#animatedModal') Contacto
+            //-li
+              a(data-scroll='', href='/postmaster') Postmaster
+
+
+            li.hidden-sm.hidden-md.hidden-xs
+              span.separator2
+            li.hidden-sm.hidden-md.hidden-xs
+              a.icon-facebook-with-circle(href='https://www.facebook.com/ciistacna/?fref=ts', target='_blank')
+            li.hidden-sm.hidden-md.hidden-xs
+              a.icon-twitter-with-circle(href='https://twitter.com/ciistacna', target='_blank')
+
+
+      .slider-wrapper.theme-mi-slider
+        #slider.nivoSlider
+          img(src='/img/fondo_index.png' style="width:100%; height:100%" bgproperties="fixed", alt='', title='#htmlcaption1')
+          img(src='/img/33.png' style="width:100%; height:100%" bgproperties="fixed", alt='', title='#htmlcaption1')
+          img(src='/img/qwerty.png' style="width:100%; height:100%" bgproperties="fixed", alt='', title='#htmlcaption1')
+
+        #htmlcaption1.nivo-html-caption
+          section#index.section.section-page
+            //- article#countdown
+            //-   .container_countdown_unit
+            //-     span#days.countdown_unit
+            //-     span.countdown_unit_label  Días
+            //-   span.separator
+            //-   .container_countdown_unit
+            //-     span#hours.countdown_unit
+            //-     span.countdown_unit_label  Horas
+            //-   span.separator
+            //-   .container_countdown_unit
+            //-     span#minutes.countdown_unit
+            //-     span.countdown_unit_label  Minutos
+            //-   span.separator
+            //-   .container_countdown_unit
+            //-     span#seconds.countdown_unit
+            //-     span.countdown_unit_label  Segundos
+            h1
+              span.highlighted
+                | CONGRESO
+                small.highlighted2  INTERNACIONAL
+              span
+                | DE
+                small.highlighted3  INFORMÁTICA Y SISTEMAS
+              span.subtitle Emprendimiento e innovación tecnológica
+              //-span.subtitle2 el mejor evento tecnológico del sur del Perú
+            .subscription
+
+              //-input#email(type='email', placeholder='Tu email')
+
+              //-button#subscribe.btn-outline.lg(type='button')  Registrate
+              button#preRegisterBtn.btn-outline.lg(href='#preRegisterModal')  Preinscríbete
+          script(type='text/javascript').
+                $('#preRegisterBtn').click(function(){
+                          $("#preRegisterBtn").animatedModal({
+                            modalTarget:'preRegisterModal',
+                            animatedOut:'bounceOutUp',
+                            color:'rgba(0,0,0,0.7)'
+                          });
+                      });
+
+
+      #animatedModal
+        .info-dudas
+          .header-dudas
+            #closedudas.close-animatedModal
+              p X
+            .titulo-dudas
+              h1 Cuéntanos tus dudas
+              p
+                | Sientete libre de expresar las dudas que tengas e inmediatamente las resolveremos.
+          .body-dudas
+            form(action='')
+              input#contactEmail(type='text', placeholder='✉ Email', required='')
+              input#contactName(type='text', placeholder='👤 Nombre', required='')
+              textarea#contactSubject(name='mensaje', placeholder='Escriba su consulta aquí...', required='')
+              input#submitContact(type='button', value='Enviar')
+
+      #preRegisterModal
+        .info-pre
+          .header-pre
+            #finpre.close-preRegisterModal
+              p X
+            .titulo-pre
+              h1 Pre - inscripciones
+              p
+                | Asegura tu lugar en el Congreso Internacional de Informática y Sistemas, inscríbete ya !
+          .body-pre
+            form#preRegisterForm(method="post",name="preRegisterForm", enctype="multipart/form-data")
+              .fila-pre
+                .campo-pre
+                  p Email
+                  input#preRegisterEmail(name='email', type='email', required='')
+                .campo-pre
+                  p Nombre
+                  input#preRegisterFirstName(name='name', type='text', required='')
+              .fila-pre
+                .campo-pre
+                  p Apellido
+                  input#preRegisterLastName(name='lastname',type='text', required='')
+                .campo-pre
+                  p DNI
+                  input#preRegisterDNI(name='dni', type='text', required='')
+              .fila-pre
+                .campo-pre
+                  p Tipo de Inscripción
+                  select#preRegisterType.form-control(name='type')
+                    each type in types
+                      option(value=type._id) #{type.name}
+                .campo-pre
+                  p Ciudad
+                  input#preRegisterCity(type='text',name='city', required='')
+              .fila-pre
+                .campo-pre
+                  p Universidad o Institución
+                  input#preRegisterInstitution(type='text', name='institution', required='')
+                .campo-pre
+                  p Celular
+                  input#preRegisterCellphone(type='text', name='cellphone', required='')
+              .fila-pre
+                .campo-pre
+                  p Tu foto de Voucher
+                  input#preRegisterVoucher(type='file', name='photo',accept='image/*', required='')
+              input#submitPreRegister(type='button', value='Enviar')
+
+
+
+      section.section.tematicos#linea-investigacion2
+        ul
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/uno.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Fecha
+
+            span.tematicos_contenido(style="color:white")
+              | Del 13 al 17 de Noviembre
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/dos.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Hora de Inicio
+
+            span.tematicos_contenido(style="color:white")
+              | 8:30 am
+
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/tres.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Lugar
+
+            span.tematicos_contenido(style="color:white")
+              | Auditorio Central de la UNJBG
+              br
+              | Auditorio de Contabilidad de la UNJBG
+
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/cuatro.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | 17 Expositores
+
+            span.tematicos_contenido(style="color:white")
+              | Expertos
+
+      section.section#videos-presentacion
+              .container-videos
+                h2.videos-titles.scrollflow.-pop.-opacity
+                  span.videos-title1 INVITACIÓN POR PARTE&nbsp
+                  span.videos-title2 DE LOS PONENTES
+                section.scrollflow.-slide-bottom.-opacity.lazy.slider(data-sizes='50vw' style="width:83%; margin:auto;")
+                  //- button.slick-pre.slick-arrow(aria-label="Previous" type="button" style="display: block;") Previous
+                  div
+                    iframe.iframe-videos(src='https://www.youtube.com/embed/9RWYSZfTTM4', frameborder='0', allowfullscreen='')
+                  div
+                    iframe.iframe-videos(src='https://www.youtube.com/embed/0rsnbwxxQWY', frameborder='0', allowfullscreen='')
+
+                  //- div
+                  //-   iframe.iframe-videos(src='https://www.youtube.com/embed/0rsnbwxxQWY', frameborder='0', allowfullscreen='')
+
+      section.section.tematicos#linea-investigacion
+          h2.scrollflow.-pop.-opacity
+            span.tematicos_title_frio EJES&nbsp
+            span.tematicos_title_caliente TEMÁTICOS
+          ul
+            li.scrollflow.-slide-right.-opacity
+              div
+                img(src='img/ico-uno.png', alt='icono de uno')
+              h4
+                span.tematicos_semititle
+                  | Analítica de
+                  br
+                  | datos
+                  br
+              span.tematicos_contenido
+                | Se trabajan con tareas orientadas a la exploración de los datos, con la intención de encontrar patrones o conocimiento útil, que permita optimizar o rentabilizar un proceso de negocio.
+            li.scrollflow.-slide-right.-opacity
+              div
+                img(src='img/ico-dos.png', alt='icono de uno')
+              h4
+                span.tematicos_semititle
+                  | Conectividad
+                  br
+                  | &nbsp
+                  br
+              span.tematicos_contenido
+                | Hace referencia a los medios, tecnologías y protocolos necesarios para el intercambio de la información en una red de computadoras.
+
+            li.scrollflow.-slide-right.-opacity
+              div
+                img(src='img/ico-tres.png', alt='icono de uno')
+              h4
+                span.tematicos_semititle
+                  | Ciencia de la
+                  br
+                  | computación
+                  br
+              span.tematicos_contenido
+                | Abarca el estudio de las bases teóricas de la información y la computación, así como su aplicación en sistemas computacionales.
+
+            li.scrollflow.-slide-right.-opacity
+              div
+                img(src='img/ico-cuatro.png', alt='icono de uno')
+              h4
+                span.tematicos_semititle
+                  | Ingeniería de
+                  br
+                  | software
+                  br
+
+
+              span.tematicos_contenido
+                | Representa el conjunto de métodos, herramientas y técnicas que se utilizan en el desarrollo del software.
+
+
+
+      section.section.actividades
+          article.scrollflow.-slide-top.-opacity
+            .catividades_titulo
+              h2.color--seco Actividades
+              h2.color--pry académicas
+            .atividades_contenido
+              p
+                | Contaremos con conferencistas nacionales e internacionales de distinguida calidad y experiencia que disertarán ponencias de alto nivel académico.
+
+            //.a(href='#') Ver mas
+          article.scrollflow.-slide-top.-opacity
+            .catividades_titulo
+              h2.color--seco Concurso
+              h2.color--pry de programación
+            .atividades_contenido
+              p
+                | Se desarrollar&aacute;n diversos concursos donde podr&aacute;s competir con diferentes estudiantes de distintas universidades de nuestro pa&iacute;s.
+            //.a(href='#') Ver mas
+          article.scrollflow.-slide-top.-opacity
+            .catividades_titulo
+              h2.color--seco Todo
+              h2.color--pry sobre Tacna
+            .atividades_contenido
+              p
+                | La "Ciudad Heroica" de Tacna cuenta con distintos atractivos turísticos, un clima agradable, desiertos y valles fértiles que conviven para crear paisajes únicos. Todo esto que hace de nuestra ciudad un destino agradable en el sur de nuestro Perú.
+            //.a(href='#') Ver mas
+
+
+
+      section.section.inversion.section-page#inversion
+        .container
+          h2
+            span.inversion_title_caliente.scrollflow.-pop.-opacity(style="") INVERSIÓN
+          .estu-prof.estudiantes.scrollflow.-slide-bottom.-opacity              
+              h3 DEL 06 de noviembre al 13 de noviembre
+              div
+                h4
+                  | ESTUDIANTE                  
+                p.precio
+                  span.sueldo S/.
+                  | 100
+                hr
+                a#registrate1(href='#preRegisterModal') Preinscríbete
+
+              div
+                h4
+                  | PROFESIONAL Y PÚBLICO EN GENERAL                  
+                p.precio
+                  span.sueldo S/.
+                  | 140
+                hr
+                a#registrate3(href='#preRegisterModal') Preinscríbete          
+
+        h3.scrollflow.-pop.-opacity Nro Cta BCP: 540-38259813-0-99 (Yovana Velasquez)
+        h4.scrollflow.-pop.-opacity  Los depósitos hechos fuera de Tacna, deben adicionar S/. 7.50 de comisión
+
+      section.section#team.bg-light-gray
+        .container
+          .row
+            .col-lg-12.text-center.scrollflow.-slide-bottom.-opacity
+              h2.section-heading CURSOS DE VERANO
+              h3.section-subheading.text-muted Conozca un poco más de nuestros cursos de verano,
+          .row
+            section.responsive.slider
+
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/1.png')
+                    .Paises2
+                      img.Pais(src='img/team/china.png')
+                      img.Pais(src='img/team/brasil.png')
+                    .mask
+                      h2 Zhao Liang
+                      button#modala.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/2.png')
+                    .Paises2
+                      img.Pais(src='img/team/peru.png')
+                      img.Pais(src='img/team/brasil.png')
+                    .mask
+                      h2 Dennis Barrios Aranibar
+                      button#modalaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/3.png')
+                    .Paises
+                      img.Pais(src='img/team/chile.png')
+                    .mask
+                      h2 Sebastian Aracena Aguirre
+                      button#modalaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/4.png')
+                    .Paises2
+                      img.Pais(src='img/team/peru.png')
+                      img.Pais(src='img/team/eeuu.png')
+                    .mask
+                      h2 Anais Molina Rodriguez
+                      button#modalaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/5.png')
+                    .Paises3
+                      img.Pais(src='img/team/peru.png')
+                      img.Pais(src='img/team/brasil.png')
+                      img.Pais(src='img/team/eeuu.png')
+                    .mask
+                      h2 Jorge Luis Poco Medina
+                      button#modalaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/6.png')
+                    .Paises
+                      img.Pais(src='img/team/peru.png')                      
+                    .mask
+                      h2 Omar Martín Palomino Humaní
+                      button#modalaaaaaa.infoModal +                      
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/7.png')
+                    .Paises2
+                      img.Pais(src='img/team/chile.png')
+                      img.Pais(src='img/team/españa.png')
+                    .mask
+                      h2 Marco Villalobos Abarca
+                      button#modalaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/8.png')
+                    .Paises2
+                      img.Pais(src='img/team/bolivia.png')
+                      img.Pais(src='img/team/argentina.png')
+                    .mask
+                      h2 Sergio Hernán Valenzuela Cámara
+                      button#modalaaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/9.png')
+                    .Paises2
+                      img.Pais(src='img/team/brasil.png')
+                      img.Pais(src='img/team/peru.png')
+                    .mask
+                      h2 Ernesto Cuadros Vargas
+                      button#modalaaaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/10.png')
+                    .Paises2
+                      img.Pais(src='img/team/peru.png')
+                      img.Pais(src='img/team/brasil.png')
+                    .mask
+                      h2 Américo Ariel Rubin De Celis Vidal
+                      button#modalaaaaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/11.png')
+                    .Paises
+                      img.Pais(src='img/team/peru.png')
+                    .mask
+                      h2 Robert Cava
+                      button#modalaaaaaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/12.png')
+                    .Paises
+                      img.Pais(src='img/team/venezuela.png')
+                    .mask
+                      h2 Magdalena de Luca
+                      button#modalaaaaaaaaaaaa.infoModal +
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/13.png')
+                    .Paises
+                      img.Pais(src='img/team/peru.png')
+                    .mask
+                      h2 Ricardo José Linares Juárez
+                      button#modalaaaaaaaaaaaaa.infoModal +                      
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/14.png')
+                    .Paises2
+                      img.Pais(src='img/team/chile.png')
+                      img.Pais(src='img/team/eeuu.png')
+                    .mask
+                      h2 Claudio Meneses Villegas
+                      button#modalaaaaaaaaaaaaaa.infoModal +     
+              div.col-sm-4
+                .team-member
+                  .producto.prod-first
+                    img(src='img/team/15.jpg')
+                    .Paises                      
+                      img.Pais(src='img/team/eeuu.png')
+                    .mask
+                      h2 Justin Kihyun Sheen
+                      button#modalaaaaaaaaaaaaaaa.infoModal +                                                                  
+      
+      section.section#talleres
+        .container-talleres
+          h2.talleres-titles.scrollflow.-pop.-opacity
+            span.taller-title1 PRECIOS&nbsp
+            span.taller-title2 TALLERES            
+        .row
+          section.responsive.slider
+
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Complex Networks
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/Complex Networks.png')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.30.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.50.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller1.opentaller(href='#bgtaller') INSCRÍBETE 
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Capture the flag (CTF): técnicas de Ethical hacking en entornos reales
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/CTF.png')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller2.opentaller(href='#bgtaller') INSCRÍBETE                        
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Artificial neural networks
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/Artificial_networks.png')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.30.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.50.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller3.opentaller(href='#bgtaller') INSCRÍBETE   
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Taller de desarrollo de videojuego con GameMaker
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/juegos.png')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller4.opentaller(href='#bgtaller') INSCRÍBETE                                                                                        
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Taller Introductorio de Raspberry Pi 3B
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/raspberry.jpg')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.30.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.40.00(Sin Inscripción al CIIS)
+                        br
+                        |                   2 sesiones
+                        br
+                      .taller-suscripcion1
+                        button#opentaller5.opentaller(href='#bgtaller') INSCRÍBETE                                             
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Taller avanzado de Raspberry Pi-Ensamblado de Robot Pibot
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/rapberry2.jpg')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.30.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.40.00(Sin Inscripción al CIIS)
+                        br
+                        |                   2 sesiones
+                        br
+                      .taller-suscripcion1
+                        button#opentaller6.opentaller(href='#bgtaller') INSCRÍBETE                         
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Taller de drones
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/drones.png')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller7.opentaller(href='#bgtaller') INSCRÍBETE                        
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Realidad virtual
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/realidad_virtual.jpg')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1                        
+                        button#opentaller8.opentaller(href='#bgtaller') INSCRÍBETE
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | SAP FI/CO CONSULTOR
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/sap.jpg')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller9.opentaller(href='#bgtaller') INSCRÍBETE         
+
+            div#btn-taller
+              .container-taller
+                .opt-taller
+                  h4.taller-title
+                      | Taller Diseño e Impresión en 3D
+                  .transition-taller                    
+                    img.imgTaller(src='img/taller/impresion_3d.jpg')
+                    .taller-suscripcion
+                      .taller-precio                        
+                        strong s/.20.00(Con Inscripción al CIIS)
+                        br
+                        strong s/.30.00(Sin Inscripción al CIIS)
+                        br
+                        |                   1 sesión
+                        br
+                      .taller-suscripcion1
+                        button#opentaller10.opentaller(href='#bgtaller') INSCRÍBETE                                      
+                   
+
+
+      #bgtaller.modal-taller  
+        .info-taller
+          .header-taller
+            #fintaller.close-bgtaller
+              p X
+            .titulo-taller
+              h1 Pre inscripciones a los Talleres del CIIS
+              //- p Asegura tu cupo al taller del CIIS, cupos limitados.
+          .body-taller
+            form(method="post",name="", enctype="multipart/form-data")
+              .fila-taller
+                .campo-taller
+                  p Email
+                  input#tallerEmail(name='email',type='text', required='')
+                .campo-taller
+                  p Nombre
+                  input#tallerName(name='name',type='text', required='')
+              .fila-taller
+                .campo-taller
+                  p Apellido
+                  input#tallerLastName(name='lastName',type='text', required='')
+                .campo-taller
+                  p DNI
+                  input#tallerDNI(name='dni',type='text', required='')
+              .fila-taller
+                .campo-taller
+                  p Seleccione el Taller
+                  select#talleres_cursos.form-control(multiple='multiple')
+                    option(value='Complex Networks') Complex Networks
+                    option(value='Capture the flag (CTF) técnicas de hacking en entornos reales de producción') Capture the flag (CTF): técnicas de Ethical hacking en entornos reales
+                    option(value='Artificial neural networks') Artificial neural networks
+                    option(value='Introducción a SAP') SAP FI/CO CONSULTOR
+                    option(value='Taller Básico de Raspberry') Taller Introductorio de Raspberry Pi 3B
+                    option(value='Taller avanzado de Raspberry') Taller avanzado de Raspberry Pi-Ensamblado de Robot Pibot
+                    option(value='Taller de drones') Taller de drones
+                    option(value='Virtual Reality: Applications in scientific research and the company') Realidad virtual
+                    option(value='Taller de videojuegos') Taller de desarrollo de videojuego con GameMaker                 
+                    option(value='impresion_3d') Taller Diseño e Impresión en 3D
+                .campo-taller
+                  p Tipo de Inscripción
+                  select#tallerType.form-control
+                    option Estudiante
+                    option Profesional y público en general
+                .campo-taller
+                  p Ciudad
+                  input#tallerCity(name='city',type='text', required='')
+                .campo-taller
+                  p Universidad o Institucion
+                  input#tallerInstitution(name='Institution',type='text', required='')              
+                .campo-taller
+                  p Celular
+                  input#tallerCellphone.form-control(name='cellphone',type='text', required='')              
+              input#submitPreRegisterTaller(type='button', value='Enviar')  
+
+      section.section#cronograma
+                    .container-cronograma
+                      h2.cronograma-titles.scrollflow.-pop.-opacity
+                        span.videos-title1 CRONOGRAMA&nbsp
+                        span.videos-title2 XVIII CIIS 2017
+                      .ScrollImg
+                        img.Cronograma(src='img/cronograma/Cronograma.png')
+                      h4.cronograma-titles.scrollflow.-pop.-opacity
+                        span.videos-title1 CRONOGRAMA TALLER
+                        span.videos-title2  LABORATORIO 01
+                      .ScrollImg
+                        img.Cronograma(src='img/cronograma/Laboratorio_A.png')
+                      h4.cronograma-titles.scrollflow.-pop.-opacity
+                        span.videos-title1 CRONOGRAMA TALLER
+                        span.videos-title2  LABORATORIO 02
+                      .ScrollImg
+                        img.Cronograma(src='img/cronograma/Laboratorio_Ciencias.png')
+
+
+      section.section.auspicios
+
+        h2
+          span.auspicios_title_caliente.scrollflow.-slide-bottom.-opacity AUSPICIADORES
+        ul.scrollflow.-pop.-opacity
+          li
+            img.img-responsive1(src='img/municipalidad_gregorio.png', alt='sponsors')
+          li
+            img.img-responsive1(src='img/Ayca.png', alt='sponsors')
+          //- li
+          //-   img.img-responsive1(src='images/Santa_Elena.png', alt='sponsors')
+          li
+            img.img-responsive1(src='img/mar_adentro.jpg', alt='sponsors')
+          li
+            img.img-responsive1(src='img/Publigraff.png', alt='sponsors')
+          li
+            img.img-responsive1(src='img/contimais.png', alt='sponsors')
+          li(style="width:20em")
+            img.img-responsive1( src='img/Dora Santa María.JPG', alt='sponsors')
+          li
+            img.img-responsive1( src='img/guerra.jpg', alt='sponsors') 
+          li(style="width:20em")
+            img.img-responsive1( src='img/conquistador.jpg', alt='sponsors')                                       
+
+      span.ir-arriba
+        img(src='img/btn_arriba2.png')
+
+
+
+      section.section.organiza(style="background:white")
+        h2.title-org.scrollflow.-pop.-opacity(style='color:#00aad4') ORGANIZA
+        .organiza_logos.scrollflow.-pop.-opacity
+          .col-md-12
+            .col-md-6
+              img(src='img/log-esis.png', alt='logo-esis')
+              label
+            .col-md-6
+              img(src='img/logo-unjbg.png', alt='logo-unjbg')
+          .col-md-6
+              p
+                | Escuela Profesional de Ingeniería en Informática y Sistemas
+          .col-md-6
+              p
+                | Universidad Nacional Jorge Basadre Grohmann
+          .col-md-12
+            p Ciudad Universitaria: Sede los Granados - Avenida Miraflores S/N - Tacna
+            p Teléfono: (052) 583000 anexo 2005
+            p Celulares: 988 899988 - 977 465783
+            p E-mail: ciistacna@unjbg.edu.pe
+      section.section#map
+          
+
+      #modalb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/china.png')
+                img.img-pais1(src='img/team/brasil.png')
+              h1 Zhao Liang
+              p
+                | -Bachiller en Ciencias en Wuhan University, China.
+                br
+                | -Ph.D en Ciencias de la Computación en Aeronautic Institute of Technology, São Paulo, Brasil.
+              .img-ponente
+                img.img-1(src='img/team/1.png')
+          span.content-ponente
+            | Se incorporó a la Universidad de São Paulo (USP) como miembro de la facultad en el año 2000, donde actualmente es Profesor Titular del Departamento de Computación y Matemáticas (DCM). De 2015 a 2017, él fue el jefe de DCM. De 2003 a 2004, fue Investigador Visitante del Departamento de Matemáticas de la Universidad Estatal de Arizona, Tempe, Estados Unidos. Sus intereses de investigación actuales incluyen el aprendizaje automático, redes complejas, reconocimiento de patrones, procesamiento de imágenes, computación inspirada en la naturaleza, redes neuronales artificiales. El Dr. Zhao fue ganador de la Beca de Productividad de Investigación de Brasil. Fue Editor Asociado de IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS desde el 2009 al 2012 y actualmente es editor Asociado de NEURAL NETWORKS. El Dr. Zhao ha publicado 01 monografías, 02 libros editados, 66 artículos de revistas y alrededor de 120 ponencias.
+
+      #modalbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+                img.img-pais1(src='img/team/brasil.png')
+              .img-ponente
+                img.img-1(src='img/team/2.png')
+              h1 Dennis Barrios Aranibar
+              p
+                | -Doctor en ingeniería eléctrica y de computación, con énfasis en sistemas inteligentes por la Universidad Federal do Rio Grande do Norte, Brasil.
+          span.content-ponente
+            | Ha desarrollado diversos proyectos de innovación tecnológica para empresas e instituciones peruanas de diversos sectores como Chatsford S.A.C., El Bosque E.I.R.L., J. Ramón del Perú S.A.C. y Akson Perú S.R.L. Es docente tiempo completo e investigador en la universidad Católica San Pablo de Arequipa con proyectos de investigación teórica y aplicada en las áreas de robótica, automatización industrial e inteligencia artificial.
+
+      #modalbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/chile.png')
+              .img-ponente
+                img.img-1(src='img/team/3.png')
+              h1 Sebastian Aracena Aguirre
+              p
+                | -Magister en Ingeniería de Software e Ingeniero Civil de Computación e Informática en la Universidad de Tarapacá.
+
+          span.content-ponente
+            | Actualmente trabaja como analista y desarrollador con Metodologías ágiles utilizando herramientas como Trello, Gitlab, Dropbox, Slack, entre otros. Especializado en Sistemas de Información Geográfica (SIG), con conocimiento a base de datos espaciales con extensión POSTGIS y realice una investigación de herramientas de Inteligencia de Negocios con tecnología GIS para el tratamiento de datos del CENSO, conocimientos en tecnología de transporte como el GTFS y planificadores multimodales tecnología bastante utilizados en el área del transporte público. Posee 03 publicaciones: dos como coautor (Publicación Scielo) y una como autor (ISI).
+      #modalbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+                img.img-pais1(src='img/team/eeuu.png')
+              .img-ponente
+                img.img-1(src='img/team/4.png')
+              h1 Anais Molina Rodriguez
+              p
+                | -Título de Especialidad en Contabilidad, Bachiller en ciencias en Lake Superior State University (LSSU).
+                br
+                | -Maestría en administración y dirección de empresas en la Universidad Peruana de las Américas.
+          span.content-ponente
+            | Certificada en bienes raíces con licencia en el estado de Massachusetts, analista de procesos de calidad y Google Analytics. Posee experiencia profesional en el área de negocios (marketing, contabilidad, administración) en empresas en Estados Unidos y Perú. Ha ocupado cargos gerenciales como directora de ventas y marketing en Estados Unidos y gerente general en empresas peruanas. Estudió en Lake Superior State University (LSSU), donde obtuvo su título profesional de bachiller en Ciencias con especialidad en administración y gestión de negocios y negocios internacionales.
+      #modalbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+                img.img-pais1(src='img/team/brasil.png')
+                img.img-pais2(src='img/team/eeuu.png')
+              .img-ponente
+                img.img-1(src='img/team/5.png')
+              h1 Jorge Luis Poco Medina
+              p
+                | -Doctorado en ciencias de la computación en New York University.
+                br
+                | -Maestría en Ciencias, programa ciencias de la computación y matemática computacional en la universidad de Sao Paulo, Brasil.
+          span.content-ponente
+            | Jorge Poco es profesor asistente en el Centro de Investigación e Innovación en Informática (RICS) de la Universidad Católica de San Pablo (UCSP). Anteriormente, fue investigador asociado en el UW Interactive Data Lab (IDL) de la Universidad de Washington. Obtuvo su doctorado en la Escuela Politécnica de Ingeniería de NYU en 2015. Antes de ir a la Universidad de Nueva York (NYU), pasó un año en el Instituto de Computación Científica e Imaging (SCI) de la Universidad de Utah (UoU). Como parte de su vida profesional trabajó en zAgile Inc (2008), Google Inc (2008 y 2010), Kitware Inc (2011), Oak Ridge National Laboratory (2012) y Xerox Research (2013).Su investigación se ha centrado en la visualización de datos. Ha participado en proyectos de visualización de información, visualización científica y análisis visual.
+      #modalbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')                
+              .img-ponente
+                img.img-1(src='img/team/6.png')
+              h1 Omar Martín Palomino Humaní
+              p
+                | -Ingeniero de Sistemas.
+                br
+                | – Maestría terminada en Gestión de TI.
+          span.content-ponente
+            | Ingeniero de Sistemas con ocho años de experiencia en área de tecnologías de información, especializado en infraestructura tecnológica, gestión de servicios de TI y administración de Seguridad de Información. Experiencia en consultoría y administración de seguridad de información y Seguridad Informática, desarrollando tareas de implementación de sistemas de Gestión de Seguridad de Información (SGSI), Gestión de Riesgos de Infraestructura Tecnológicas (ISO 27005), evaluación de controles de Seguridad de Información (ISO27001 – ISO 27002) y realizando evaluaciones y análisis de seguridad de TI realizando servicios de Ethical Hacking. Además, es Instructor Oficial de la organización internacional MILE2 e instructor de Ethical Hacking en la Universidad Nacional de Ingeniería (UNI).      
+      #modalbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/chile.png')
+                img.img-pais1(src='img/team/españa.png')
+              .img-ponente
+                img.img-1(src='img/team/7.png')
+              h1 Marco Villalobos Abarca
+              p
+                | -Doctor en Informática, Universidad Politécnica de Madrid-España.
+          span.content-ponente
+            | El Dr. Villalobos lleva más de 20 años dedicados a la docencia en el área curricular del Desarrollo de Sistemas Software, dictando cursos tales como Ingeniería de Software, Sistema de Información, Taller de Proyectos de Software, Taller de Ética y Responsabilidad del Informático, entre otros. Además, ha ejercido diversos cargos directivos tales como Jefatura de Carrera, Dirección de Departamento y Decanatura de Escuela Universitaria.
+      #modalbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/bolivia.png')
+                img.img-pais1(src='img/team/argentina.png')
+              .img-ponente
+                img.img-1(src='img/team/8.png')
+              h1 Sergio Hernán Valenzuela Cámara
+              p
+                | -Maestría en Ingeniería de software en la Universidad Nacional de la Plata, Argentina.
+          span.content-ponente
+            | Consultor en Informática y software developer en varias empresas privadas y públicas de Cochabamba, La Paz( Bolivia ) y Arica( Chile ).  Áreas de Interés: IoT(Internet of Things), Machine Learning, Software Engineering, E-Commerce, Web Applications y Software Development.
+      #modalbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/brasil.png')
+                img.img-pais1(src='img/team/peru.png')
+              .img-ponente
+                img.img-1(src='img/team/9.png')
+              h1 Ernesto Cuadros Vargas
+              p
+                | -Doctor en ciencias de la computación en el ICMC de la Universidad de Sao Paulo, Brasil.
+          span.content-ponente
+            | Recibió su Doctorado en Ciencia de la Computación en el ICMC de la Universidad de Sao Paulo (Brasil) en conjunto con Carnegie Mellon University (USA) con el Prof Christos Faloutsos en 2001 y el Technischen Universitat Berlin de Alemania con el Prof Dr. Klaus Obermayer en 2002 . Es fundador y miembro de la Sociedad de Computación Peruana y ha ocupado la presidencia en los periodos 2001-2007 y en 2009. El Prof. Cuadros-Vargas también ha Secretario Ejecutivo del Centro Latinoamericano de Informática (CLEI) (2008-2016) y Miembro del Educational Activities Board de IEEE (2006-2009), miembro de equipo de ACM/IEEE-CS Computing Curricula for Computer Science (CS2013) y del equipo de Computing Curricula (CC2020). Sus principales áreas de interés son la Educación Superior en Computación, Recuperación de Información por Similaridad, Métodos de Acceso y Redes Neuronales.
+      #modalbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+                img.img-pais1(src='img/team/brasil.png')
+              .img-ponente
+                img.img-1(src='img/team/10.png')
+              h1 Américo Ariel Rubin de Celis Vidal
+              p
+                | -Doctorado en  Ingeniería Eléctrica con énfasis en Sistemas de Comunicaciones en la Pontificia Universidad Católica de Rio de Janeiro, Brasil.
+          span.content-ponente
+            | El año 2012 y 2017, recibió los grados académicos de Maestro (MSc.) y Doctor (Ph.D.), ambos en Ingeniería Eléctrica con énfasis en Sistemas de Comunicaciones por la Pontificia Universidad Católica de Rio de Janeiro (PUC-Rio)-Brasil. Entre los años 2006 a 2010 trabajó como profesor a tiempo parcial y completo en la Facultad de Ingeniería de la Universidad Privada de Tacna. Desde el año 2010 al 2017 se desempeñó como investigador en el Centro de Estudios en Telecomunicaciones (CETUC) de la Pontificia Universidad Católica de Rio de Janeiro. Actualmente labora como profesor a tiempo completo en la Universidad Nacional de Moquegua. Sus áreas de Investigación incluyen Sistemas de Comunicación por Satélite, Sistemas de Comunicaciones Digitales, Sistemas de Comunicaciones en VHF-UHF, y Procesamiento Digital de Señales.
+      #modalbbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+              .img-ponente
+                img.img-1(src='img/team/11.png')
+              h1 Robert Cava
+              p
+                | -Empresario.
+          span.content-ponente
+            | Es fundador y presidente de Corp. Young of Today and Tomorrow S.A.C., GreenBerry Corporation S.A.C. y Cooperativa Pucallpa.
+      #modalbbbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/venezuela.png')
+              .img-ponente
+                img.img-1(src='img/team/12.png')
+              h1 Magdalena de Luca
+              p
+                | -Ingeniero en Computación egresada de la Universidad Simón Bolívar.
+                br
+                | -Postgrado en Investigación de Operaciones en la Universidad Central de Venezuela.
+                br
+                | -Especialización en Gerencia y Mercadeo en el IESA.
+
+          span.content-ponente
+            | Ingeniero en Computación egresada de la Universidad Simón Bolívar con postgrado en Investigación de Operaciones en la Universidad Central de Venezuela y Especialización en Gerencia y Mercadeo en el IESA. Empresaria y conferencista internacional en el área de Integración Tecnológica, para la Región de Latinoamérica y el Caribe. Fundadora y Presidenta de Sybven, LLC holdings de empresas de Integración Tecnológica distribuidora de SAP-Sybase, KONY, Blackboard, DANA e IBM para Venezuela, México, Perú, Bolivia y el Caribe. Directora de DANA, empresa especializada en plataformas de campañas de mercadeo multicanal y CCM (manejo de comunicaciones automatizadas a clientes) para Venezuela, Mejico, Perú, Bolivia, el Caribe y Norte América Evangelizadora en temas de Integración Tecnológica Ecológica y tecnología aplicada a la educación. Ha establecido convenios con Universidades, Fundaciones y ONGs y emprendido proyectos de concientización en Venezuela y Latinoamérica.
+      #modalbbbbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/peru.png')
+              .img-ponente
+                img.img-1(src='img/team/13.png')
+              h1 Ricardo José Linares Juárez
+              p
+                | -Maestro en Ciencias: Informática, con Mención en Tecnologías de Información.                
+
+          span.content-ponente
+            | Entre los años 2014 y 2016 trabajó en el proyecto de investigación científica de "Laboratorios Virtuales" para la Universidad Nacional de San Agustín de Arequipa. Ganador de Beca Concytec. Ha presentado sus trabajos de investigación científica en el campo de la Realidad Virtual en los países de Ecuador, Argentina y Cuba. Actualmente es Jefe de Proyecto de la nueva versión del Sistema Nacional SIRTOD en el Instituto Nacional de Estadística e Informática. Programador certificado internacionalmente por ORACLE. Sus áreas de Investigación son:
+            br
+            |- Realidad Virtual.
+            br
+            |- Inteligencia Artificial.
+            br
+            |- Procesamiento de Lenguaje Natural.
+            br
+            |- Interacción Humano Computador.
+
+      #modalbbbbbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcccccccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/eeuu.png')
+                img.img-pais1(src='img/team/chile.png')                
+              .img-ponente
+                img.img-1(src='img/team/14.png')
+              h1 Claudio Meneses Villegas
+              p
+                | -Doctor en Ciencias en University of Massachusetts, USA.                
+
+          span.content-ponente
+            | Claudio Meneses obtuvo su Ph.D. y MSc. desde la University of Massachusetts, USA, en 2002 y 1997 respectivamente. Actualmente se desempeña como Director del Departamento de Ingeniería de Sistemas y Computación de la U. Católica del Norte, Antofagasta, Chile. Ha sido miembro del directorio de la Sociedad Chilena de Ciencias de la Computación, y es el actual presidente del consorcio Infonor Chile. Sus intereses de investigación incluyen Machine Learning, Data Mining, Information Visualization.
+      #modalbbbbbbbbbbbbbbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalccccccccccccccc.close-ponente
+              p X
+            .titulo-ponente
+              .img-paises
+                img.img-pais(src='img/team/eeuu.png')                
+              .img-ponente
+                img.img-1(src='img/team/15.jpg')
+              h1 Justin Kihyun Sheen
+              p
+                | -Bachiller en ciencias con Mención en Biología Computacional.
+
+          span.content-ponente
+            | En la actualidad trabaja como investigador en el Centro de Epidemiología Clínica y Bioestadística de la Facultad de Medicina Perelman en la Universidad de Pennsylvania sobre el vector de la enfermedad de Chagas. Fue asistente de investigación en el Departamento de Neurología del Hospital de Niños de Pennsylvania. Entre sus reconocimientos cabe destacar que ganó la Subvención de investigación y viajes otorgado por Pincus-Magaziner Famil, donde viajó a Perú para trabajar en un proyecto de investigación sobre la diseminación de la enfermedad de Chagas en el 2017.            
+                        

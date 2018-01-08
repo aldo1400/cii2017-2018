@@ -1,0 +1,59 @@
+extends layout
+
+
+block content
+  footer
+  section#pricing-table.section-page
+    .container
+      h2.title-list(style='font-size:40px;') PRE-INSCRITOS CIIS
+      .table-responsive
+        table#listPM.table.table-prices
+          thead
+            tr
+              td
+                | Nombres
+              td
+                | Apellidos
+              td
+                | DNI
+              td
+                | Institución
+              td
+                | Ciudad
+              td
+                | Email
+              td
+                | Celular
+              td
+                | Foto
+          if   user
+            tbody
+              each users in user
+                tr
+                  td
+                    h4  #{users.name}
+                  td
+                    h4  #{users.lastname}
+                  td
+                    h4.dniReniec #{users.dni}
+                  td
+                    h4  #{users.institution}
+                  td
+                    h4 #{users.city}
+                  td
+                    h4  #{users.email}
+                  td
+                    h4  #{users.cellphone}
+                  td
+                    button(onclick="showPhoto('#{users.photo}')",style="color: teal") Ver Foto
+                    //- img(src='http://localhost:3000/uploads\\KUPELHHQ1HjvWKoHRkeZ4FM9zG4F3X2i.png', height='100', width='100')
+                  ul
+      button.list-button(onclick="tableToExcel('listPM','POSTMASTER : LISTA DE PRE-INSCRITOS')") EXPORTAR
+      //- img(src='http://localhost:3000/uploads\\KUPELHHQ1HjvWKoHRkeZ4FM9zG4F3X2i.png', height='100', width='100')
+      //- 
+      //- form#photoForm(method="post",name="photo",action='photo',onsubmit='createPhoto()', enctype="multipart/form-data")
+      //-   h3  Foto
+      //-     | Tu foto de boleta
+      //-     input#photoUp(type='file',name='photo', style='color:black;', required='')
+      //- input(type='submit',name='submit',value='Enviar')
+      

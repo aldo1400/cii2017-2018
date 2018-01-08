@@ -1,0 +1,73 @@
+#createUserModal.modal.fade(role='dialog')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4.modal-title Crear Usuario
+        button#closeCreate.close(type='button', data-dismiss='modal') ×
+      .modal-body
+        .row
+            .col-md-6
+                .form-group
+                    label(for='pwd') Nombre:
+                    input#nameCreate.form-control(type='')
+            .col-md-6
+                .form-group
+                    label(for='pwd') Apellido:
+                    input#lastnameCreate.form-control(type='')
+            .col-md-6
+                .form-group
+                    label(for='pwd') Email:
+                    input#emailCreate.form-control(type='')
+            .col-md-6
+                .form-group
+                    label(for='pwd') DNI:
+                    input#dniCreate.form-control(type='')
+            .col-md-6
+                .form-group
+                    label(for='pwd') Telefono - Celular:
+                    input#cellphoneCreate.form-control(type='')  
+            .col-md-6
+                .form-group
+                    label(for='pwd') Ciudad:
+                    input#cityCreate.form-control(type='',value="Tacna")
+            .col-md-6
+                .form-group
+                    label(for='pwd') Institución:
+                    input#institutionCreate.form-control(type='',value="UNJBG")
+            .col-md-6
+                .form-group
+                    label(for='pwd') Delegacion:
+                    select#delegationCreate.form-control(name='type')
+                      option(value="") Ninguna
+                      option(value="ESIS-E",selected) ESIS-Estudiante
+                      option(value="ESIS-P") ESIS-Profesional
+                      option(value="PUNO") PUNO
+                      option(value="PUNO-P") PUNO-Profesional
+                      option(value="AYACUCHO") AYACUCHO
+                      option(value="AYACUCHO-P") AYACUCHO-Profesional
+                      option(value="UAP") UAP
+                      option(value="UAP-P") UAP-Profesional
+                      option(value="UPT") UPT
+                      option(value="UPT-P") UPT-Profesional
+                      option(value="UNAM") UNAM
+                      option(value="UNAM-P") UNAM-Profesional
+                      option(value="ILO") ILO
+                      option(value="ILO-P") ILO-Profesional
+            .col-md-6
+                .form-group
+                    label(for='pwd') Tipo de inscripción:
+                    select#typeCreate.form-control(name='type')
+                      each type in types
+                        option(value=type._id) #{type.name}
+            .col-md-6
+                .form-group
+                    label(for='pwd') Descuento:
+                    input#discountCreate.form-control(type='number')
+            .col-md-6
+                .form-group
+                    label(for='pwd') Descripción:
+                    textarea#descriptionCreate.form-control(type='')
+      .modal-footer
+        input#submitCreate.btn.btn-primary(type='button',value="Crear")
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        

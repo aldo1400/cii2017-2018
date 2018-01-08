@@ -1,0 +1,33 @@
+#paymentUserModal.modal.fade(role='dialog')
+  .modal-dialog.modal-lg
+    // Modal content
+    .modal-content
+      .modal-header
+        button#closePayment.close(type='button', data-dismiss='modal') ×
+        input#userPayment(type='hidden')
+        h4#allnamePayment.modal-title Pagos
+      .modal-body
+        .row
+            .col-md-6
+                .form-group
+                    label(for='pwd') Cantidad:
+                    input#cantidadPago.form-control(type='number',value=0)
+            .col-md-6
+                .form-group
+                    label(for='pwd') Tipo:
+                    select#tipoPago.form-control(for='pwd') 
+                        option(value="Efectivo") Efectivo
+                        option(value="Voucher") Voucher
+
+      .modal-footer
+        button#submitPago.btn.btn-primary(type='button') Crear
+        table#lista_pagos.table.table-bordered.dataTable(width='100%', cellspacing='0', role='grid', aria-describedby='dataTable_info', style='width: 100%;')
+            thead
+              tr(role='row')
+              th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 52px;') Orden
+              th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 152px;') Fecha
+              th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Office: activate to sort column ascending', style='width: 110px;') Tipo
+              th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Position: activate to sort column ascending', style='width: 238px;') Cantidad
+              th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 85px;') Actions
+            tbody
+      button.btn.btn-default(type='button', data-dismiss='modal') Close

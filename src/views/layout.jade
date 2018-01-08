@@ -1,0 +1,216 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1')
+    meta(property='fb:app_id', content='1115877665114558')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='http://www.ciistacna.com/')
+    meta(property='og:title', content='ciis tacna')
+    meta(property='og:image', content='http://www.ciistacna.com/images/fbciis.png')
+    meta(property='og:description', content='ciis')
+
+    title XVIII Congreso Internacional de Informática y Sistemas
+        
+    link(rel='icon', href='img/logo.ico')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/home.css')
+    link(rel='stylesheet', href='/css/modalPonente.css')
+    link(rel='stylesheet', href='/css/slick.css')
+    link(rel='stylesheet', href='/css/slick-theme.css')
+    link(rel='stylesheet', href='/css/agency.css')
+    link(rel='stylesheet', href='/css/tallerInscripcion.css')
+    link(rel='stylesheet', href='/css/font-awesome.css')
+    link(rel='stylesheet', href='/css/alvaro.css')
+    link(rel='stylesheet', href='/css/select2.css')    
+    link(rel='stylesheet', href='/css/botones.css')
+    link(rel='stylesheet', href='/css/nivo-slider.css')
+    link(rel='stylesheet', href='/css/mi-slider.css')
+    link(rel='stylesheet', href='/css/dudas.css')
+    link(rel='stylesheet', href='/css/jquery.fullPage.css')      
+    link(rel='stylesheet', href='/css/preinscripcion.css')
+    link(rel='stylesheet', href='/css/normalize.css')      
+    link(rel='stylesheet', href='/css/mediaelementplayer/mediaelementplayer.min.css')
+
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.css', rel='stylesheet', type='text/css')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css', rel='stylesheet', type='text/css')
+
+    link(href='/icomoon/style.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.7/remodal-default-theme.css')
+    
+   
+
+    //- include header
+    #fullpage
+    block content
+
+
+
+  script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+  script(src='http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js', type='text/javascript')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAn26PVNnI0BqB-umXi2hpf6BFr7P1Ll4M', type='text/javascript')
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', type='text/javascript')
+    
+
+  script(src='/js/bootstrap.min.js', type='text/javascript', charset='utf-8')
+
+  script(src='/js/build/plugins.min.js', type='text/javascript', charset='utf-8')    
+  script(src='/js/slick.js', type='text/javascript', charset='utf-8')
+  script(src='/js/vertaller.js', type='text/javascript', charset='utf-8')    
+  script(src='/js/modalPonente.js', type='text/javascript', charset='utf-8')
+  script(src='/js/select2.js', type='text/javascript', charset='utf-8')  
+  script(src='/js/select2.full.js', type='text/javascript', charset='utf-8')  
+  script(src='/js/jquery.fullPage.js', type='text/javascript', charset='utf-8')
+  script(src='/js/animatedModal.js', type='text/javascript', charset='utf-8')
+  script(src='/js/main.js', type='text/javascript', charset='utf-8')  
+  script(src='/js/modales.js', type='text/javascript', charset='utf-8')  
+  script(src='/js/jquery.nivo.slider.js', type='text/javascript', charset='utf-8')
+  script(src='/js/eskju.jquery.scrollflow.js', type='text/javascript', charset='utf-8')
+
+  script(src='/js/bootstrapValidator.min.js', type='text/javascript', charset='utf-8')
+
+  script(type='text/javascript', src='  https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.7/remodal.min.js', charset='utf-8')
+
+  script(type='text/javascript', src='  https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.4/js/smooth-scroll.min.js')
+  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='https://tecactus-4b42.kxcdn.com/reniec-sunat-js.min.js')
+  script.
+    var tableToExcel = (function() {
+    var uri = 'data:application/vnd.ms-excel;base64,'
+      , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+      , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+      , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+    return function(table, name) {
+      if (!table.nodeType) table = document.getElementById(table)
+      var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+      window.location.href = uri + base64(format(template, ctx))
+    }
+    })()
+  script(type='text/javascript').
+       var arrayDNI = $('.dniReniec');
+       $.map(arrayDNI,function(value){
+            //checkDNI(value.textContent);
+         })
+         function showPhoto(data){
+           var last = data.substring(7, data.length);
+           console.log(last);
+           //window.location.href = window.location.protocol + "//" + window.location.host + "/" + "uploads/"+last;*/
+           window.open(window.location.protocol + "//" + window.location.host + "/" + "uploads/"+last, '_blank');
+         }  
+         function checkDNI (dni){
+           var tecactusApi = new TecactusApi("eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJiZjQyYmY5YzJiYmVhNjhlY2ExNjg0ZjcyNTU0ODY0NzhjMGFlMmQ2ZTkwOWUyYTAzZmRmMmViZDI1YWQzMDE5NGIyMTg2ZjFiMWRjNjM3In0.eyJhdWQiOiIxIiwianRpIjoiYmJmNDJiZjljMmJiZWE2OGVjYTE2ODRmNzI1NTQ4NjQ3OGMwYWUyZDZlOTA5ZTJhMDNmZGYyZWJkMjVhZDMwMTk0YjIxODZmMWIxZGM2MzciLCJpYXQiOjE1MDQ4MDI1NDUsIm5iZiI6MTUwNDgwMjU0NSwiZXhwIjoxNTM2MzM4NTQ1LCJzdWIiOiI2OTIiLCJzY29wZXMiOlsidXNlLXJlbmllYyJdfQ.3EELn6kT0fPyjwsPPxorsf9Mds7-FPSKkP91NsHrTgB0jvzLSPUEm7hoATv6-ObiHek80X60btnG0NxtZWkiWA0MyUYiBY4fUbP73CrSuk96Hnew6hAywGzfXFBoI0r5-5r-Dx0Nr53MrdP0wN5goGVS64Fy3h5UVxPQntYps0efVyaMu2XE6J9gysC6cpZ36Sqrf1mZNeBHTEftQWT1zBXvpO4vPGsmLZMxgkPnF4rj_kFz8NfU3a-Yna5mD1LsTLf8t2OxjH_jEfjB3ScF55XqwUwnecSW9K0r7DU7y06f7nrXz8beVfOLr1_SL_jjnmzzcq8BK6zMkcRddEGBeNCINM3tq0zHcvbNuGpovV5NGHxrsoCN0mWn1HPBp2S8VY1SJkpSTfJ0vBJyid_m5TZnkI-uwIWGMQ3ogip6eqG68azRAOATiBqUuYPqBnUj4R67bocWqBWRyumspgsAXLeHul34MM4rRFNW0fu4zNpCQWa7teURroFcWA7vRbB9ZAyIc87KxChhwfm5l1kB9WmmJQ-M7lfidisJeAjliPbscIPXWnCPVGKYMXGKajbio1xMlvaXv0-SUAi8UH9zG0rGrcVK8EC3HC2AJ9oMkaw5IHD91pG4by8izVuLeU_n1VgIO_U3hphe83XdzPKpe52HOTplgwPEpfTgz-gDJ2s")
+           
+           var dni = new String(dni);
+           dni = dni.replace(/\s/g, '');
+           console.log(dni);
+           tecactusApi.Reniec.getDni(dni)
+           .then(function (response) {
+             console.log("consulta correcta!")
+             console.log(response.data)
+             var data = response.data;
+             console.log(data.dni);
+             var dni = data.dni;
+             var file = findElementByText(dni);
+             file.eq(2)[0].innerHTML = data.nombres;
+             file.eq(3)[0].innerHTML = data.apellido_paterno+" "+data.apellido_materno;
+             
+             })
+             .catch(function (response) {
+               console.log("algo ocurrió")
+               console.log("código de error: " + response.code)
+               console.log("mensaje de respuesta: " + response.status)
+               console.log(response.data)
+               })
+         }
+         function findElementByText(dni){
+             var jSpot=$("h4:contains("+dni+")")
+                   .filter(function(){ return $(this).children().length === 0;})
+                   .parent().closest('tr').find('td');  // because you asked the parent of that element
+
+             return jSpot;
+          }
+
+   
+  script(type='text/javascript').
+    var myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 1);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+
+    
+    smoothScroll.init();
+    $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+    $('.navigation').addClass('shrink');
+    $(".nav-logo").addClass("shrink-logo");
+    $(".menu").addClass('items-collapsed')
+    $(".nav-items").addClass("hide")
+    } else {
+    $('.navigation').removeClass('shrink');
+    $(".nav-logo").removeClass("shrink-logo")
+    $(".menu").removeClass('items-collapsed')
+    $(".nav-items").removeClass("hide")
+    }
+    });
+
+    $('.responsive').slick({
+            dots: true,
+            autoplay:true,
+            
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplaySpeed: 2000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 950,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 700,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });
+
+    $(".lazy").slick({
+              dots: true,
+              lazyLoad: 'ondemand', // ondemand progressive anticipated
+              autoplay:true,
+              infinite: true,
+            });
+      
+    
+
+
+  body(onload='myFunction()', style='margin:0;')  
+                

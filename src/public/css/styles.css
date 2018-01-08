@@ -1,0 +1,623 @@
+#contactForm,
+#preRegisterForm {
+	text-align: center;
+	color: #f5f5f5;
+}
+
+#contactForm h3,
+#preRegisterForm h3 {
+	text-align: center;
+	font-size: 2.2em;
+	font-weight: bolder;
+	padding-bottom: 20px;
+	border-bottom: 5px solid #f5f5f5;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: -56px;
+	margin-bottom: 50px;
+}
+
+#contactForm label,
+#preRegisterForm label {
+	display: block;
+	padding: 14px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#contactForm input,
+#preRegisterForm input {
+	height: 20px;
+	text-align: center;
+}
+
+#contactForm textarea,
+#preRegisterForm textarea {
+	height: 100px;
+}
+
+#contactForm input,
+#preRegisterForm input,
+#contactForm textarea,
+#preRegisterForm textarea {
+	font-size: 0.9em;
+	padding: 15px;
+	padding-left: 25px;
+	display: block;
+	border: 0;
+	border-radius: 4px;
+	width: 50%;
+	margin: 10px auto;
+}
+
+#contactForm select,
+#preRegisterForm select {
+	width: calc(50% + 30px);
+	display: inline-block;
+	height: 50px;
+	text-align-last: center;
+	margin-bottom: 24px;
+}
+
+#submitContact,
+#submitPreRegister {
+	margin-top: 0.9em;
+	font-size: 1.6em;
+	display: inline-block;
+	padding: 0.3em 5em;
+	margin-bottom: 1.3em;
+}
+
+.closebt {
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.closebt:hover {
+	transform: rotate(180deg);
+}
+
+.spiningAjax {
+	width: 35px;
+	height: 35px;
+	margin: auto;
+	vertical-align: bottom;
+	padding-left: 15px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #f5f5f5;
+}
+
+a:visited {
+	color: #f5f5f5;
+}
+
+a:hover {
+	color: #00aad4;
+}
+
+a,
+span {
+	transition: 0.2s ease-in-out;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #111;
+	background: #f5f5f5;
+	text-align: center;
+}
+
+header {
+	background: transparent;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+header nav {
+	margin: auto;
+	margin-right: 60px;
+	display: flex;
+	flex-flow: row;
+	font-size: 1.2em;
+}
+
+header nav .separator {
+	border: 1px solid #f5f5f5;
+	margin: 25px 9px;
+	height: 15px;
+}
+
+header .icon-twitter-with-circle:hover,
+header .icon-facebook-with-circle:hover {
+	color: #00aad4;
+}
+
+header .icon-twitter-with-circle,
+header .icon-facebook-with-circle {
+	font-size: 27px;
+	margin: auto 3px;
+}
+
+header section {
+	display: flex;
+	padding: 30px 50px;
+}
+
+header section h2 {
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+}
+
+header section h2 .header-title-number {
+	color: #b3d44e;
+	font-size: 1.3em;
+	padding: 0;
+	margin-bottom: -27px;
+}
+
+header section h2 .header-title-text {
+	font-size: 2.6em;
+	color: #00aad4;
+}
+
+header section .separator {
+	border: 2px solid #b3d44e;
+	margin: 30px 15px;
+	margin-top: 50px;
+}
+
+header section p {
+	color: #00aad4 !important;
+	margin-top: 50px;
+	text-align: left;
+	font-size: 1em;
+	line-height: 15px;
+}
+
+header section ul {
+	margin-left: auto;
+	text-align: right;
+	background: #f00;
+}
+
+header section .header-title-number,
+header section .header-title-text,
+header section .separator,
+header section p {
+	color: #f5f5f5;
+	font-weight: bolder;
+}
+
+header section .nav-logo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: auto 1px;
+}
+
+#index {
+	background-image: url("/img/fondo_index.png");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	min-height: 600px;
+	max-width: 100%;
+	text-align: center;
+	vertical-align: center;
+	color: #f5f5f5;
+}
+
+#index .subscription {
+	padding: 0 1.5em;
+}
+
+#index .subscription input {
+	width: 25%;
+	max-width: 100%;
+}
+
+#index h1 {
+	font-size: 1.7em;
+	color: #b3d44e;
+	margin-top: 180px;
+}
+
+#index h1 span {
+	display: block;
+}
+
+#index h1 span.highlighted {
+	font-size: 1.6em;
+	font-weight: 100;
+	color: #00aad4;
+}
+
+@media (max-width: 480px) {
+	#index h1 span.highlighted {
+		font-size: 1.35em;
+		padding-bottom: 0.2em;
+	}
+}
+
+#index input,
+#index button {
+	margin: 1em auto;
+	margin-bottom: 0.5em;
+}
+
+#index button {
+	display: inline-block;
+	margin-top: 0.2em;
+}
+
+#index input {
+	display: inline-block;
+	padding: 0.8em 4em;
+	padding-left: 1em;
+	border-radius: 7px;
+}
+
+@media (max-width: 480px) {
+	#index input {
+		margin-top: 1.3em;
+	}
+}
+
+#countdown {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#countdown .container_countdown_unit {
+	padding: 3em;
+}
+
+@media only screen and (max-width: 480px) {
+	#countdown .container_countdown_unit {
+		padding: 1.3em;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	#countdown .container_countdown_unit {
+		padding: 1.8em;
+	}
+}
+
+#countdown .container_countdown_unit .countdown_unit {
+	font-size: 3.2em;
+	display: block;
+}
+
+@media only screen and (max-width: 480px) {
+	#countdown .container_countdown_unit .countdown_unit {
+		font-size: 1.9em;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	#countdown .container_countdown_unit .countdown_unit {
+		font-size: 2.4em;
+	}
+}
+
+#countdown .separator {
+	border: 1px solid rgba(255,255,255,0.5);
+	margin: 4em 0;
+}
+
+@media only screen and (max-width: 480px) {
+	#countdown .separator {
+		margin: 2em 0;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	#countdown .separator {
+		margin: 2.8em 0;
+	}
+}
+
+.btn-outline-inverse {
+	color: #f5f5f5;
+	background: transparent;
+	border-radius: 6px;
+	border: 2px solid #f5f5f5;
+	padding: 0.5em;
+}
+
+.btn-outline-inverse:hover {
+	background: #f5f5f5;
+	color: #00aad4;
+}
+
+.btn-outline-inverse:disabled {
+	background: transparent;
+	color: #ddd;
+	border-color: #ddd;
+}
+
+.btn-outline-inverse.green:disabled,
+.btn-outline-inverse.green color: white,
+.btn-outline-inverse.green:hover {
+	color: #b3d44e;
+}
+
+.btn-outline {
+	color: #f5f5f5;
+	background: transparent;
+	border-radius: 6px;
+	border: 2px solid #f5f5f5;
+	padding: 0.5em;
+	text-shadow: 1px 1px 1px #30436d;
+}
+
+.btn-outline.lg {
+	font-size: 1.2em;
+	padding: 0.5em 2.2em;
+}
+
+.btn-outline:hover {
+	background: #00aad4;
+	border-color: #00aad4;
+}
+
+.btn-outline[disabled] {
+	background: transparent;
+	color: #aaa;
+	border-color: #aaa;
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+}
+
+@media (max-width: 420px) {
+	body {
+		font-size: 10px !important;
+	}
+
+	#index h1 {
+		padding: 0 12px !important;
+	}
+
+	#index .subscription {
+		padding: 0 1.5em;
+	}
+
+	#index .subscription input,
+  #index .subscription button {
+		width: 90% !important;
+		display: block;
+		max-width: 100%;
+	}
+
+	header section .nav-logo {
+		width: 50px !important;
+		height: 50px !important;
+		margin-top: !important;
+	}
+
+	header section .header-title-number {
+		margin-top: 15px !important;
+	}
+
+	header section h2 {
+		padding-left: 5px !important;
+	}
+
+	header nav ul {
+		padding-left: 5% !important;
+	}
+
+	header nav .separator {
+		margin: 13px 8px !important;
+		margin-right: 5px !important;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 13px;
+	}
+
+	#contactForm h3,
+  #preRegisterForm h3 {
+		font-size: 1.8em !important;
+		margin-bottom: 20px !important;
+		padding-bottom: 15px;
+		margin-right: -45px;
+	}
+
+	#contactForm label,
+  #preRegisterForm label {
+		padding: 8px;
+	}
+
+	#contactForm input,
+  #preRegisterForm input,
+  #contactForm textarea,
+  #preRegisterForm textarea {
+		width: 70%;
+	}
+
+	#contactForm select,
+  #preRegisterForm select {
+		width: calc(70% + 30px);
+	}
+
+	.closebt {
+		margin-top: 10px;
+		margin-right: 10px;
+		width: 35px !important;
+	}
+
+	#index h1 {
+		margin-top: 80px !important;
+	}
+
+	#index .subscription {
+		padding: 0 1.5em;
+	}
+
+	#index .subscription input {
+		width: 100%;
+		display: block;
+		max-width: 100%;
+	}
+
+	#index .subscription button {
+		width: 100%;
+		display: block;
+	}
+
+	#index .subscription input,
+  #index .subscription button {
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 561px) {
+	#contactForm h3,
+  #preRegisterForm h3 {
+		font-size: 2em;
+		margin-bottom: 10px;
+	}
+
+	.closebt {
+		margin-top: 10px !important;
+		margin-right: 10px !important;
+		width: 45px;
+	}
+
+	#index h1 {
+		margin-top: 0px;
+	}
+
+	nav ul {
+		padding-left: 5% !important;
+	}
+
+	nav .separator {
+		margin: 20px 9px !important;
+	}
+
+	section p,
+  section .separator {
+		display: none !important;
+		color: #00aad4 !important;
+		margin-top: 75px !important;
+		text-align: left;
+		font-size: 0.8em !important;
+		line-height: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+
+	header section {
+		display: flex;
+		padding: 30px 20px !important;
+	}
+
+	header section h2 {
+		display: flex;
+		flex-direction: column;
+		padding-left: 15px;
+	}
+
+	header section h2 .header-title-number {
+		margin-top: 25px;
+		color: #b3d44e;
+		font-size: 1em !important;
+		padding: 0px !important;
+		margin-bottom: -25px !important;
+		line-height: 50px;
+	}
+
+	header section h2 .header-title-text {
+		font-size: 2.1em !important;
+		margin-bottom: 25px;
+		color: #00aad4;
+	}
+
+	header section .nav-logo {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		margin: auto 1px;
+	}
+
+	header section .separator {
+		border: 2px solid #b3d44e;
+		margin: 55px 10px !important;
+		margin-top: 80px !important;
+	}
+
+	header section p {
+		color: #00aad4 !important;
+		margin-top: 75px !important;
+		text-align: left;
+		font-size: 0.8em !important;
+		line-height: 15px;
+	}
+
+	header nav {
+		margin-right: 30px !important;
+	}
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#preRegisterBtn {
+	width: 30%;
+	min-width: 195px;
+}
+
+input.capitalize {
+	text-transform: capitalize;
+}

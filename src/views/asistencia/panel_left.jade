@@ -1,0 +1,31 @@
+nav#sidebar.navbar-default.navbar-static-side(role='navigation')
+    .sidebar-collapse.menu-scroll
+        ul#side-menu.nav
+            li.user-panel
+                .thumb
+                    img.img-circle(src='/img/logo1.png', alt='' width="100" height="100")
+                .info
+                    p ADMIN
+                    ul.list-inline.list-unstyled
+                        li
+                            a(href='extra-profile.html', data-hover='tooltip', title='Profile')
+                            i.fa.fa-user
+                        li
+                            a(href='email-inbox.html', data-hover='tooltip', title='Mail')
+                            i.fa.fa-envelope
+                        li
+                            a(href='#', data-hover='tooltip', title='Setting', data-toggle='modal', data-target='#modal-config')
+                            i.fa.fa-cog
+                        li
+                            a(href='extra-signin.html', data-hover='tooltip', title='Logout')
+                            i.fa.fa-sign-out
+            .clearfix
+            br
+            li
+                a(href='/sistemadeasistencia')
+                    i.fa.fa-tachometer.fa-fw
+                        .icon-bg.bg-orange
+                    span.menu-title USUARIOS
+
+
+                            

@@ -1,0 +1,948 @@
+doctype html
+html(lang='en')
+  head
+    title CIIS | TACNA
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='cache-control', content='no-cache')
+    meta(http-equiv='expires', content='Thu, 19 Nov 1900 08:52:00 GMT')
+    link(rel='shortcut icon', href='images/icons/favicon.html')
+    link(rel='apple-touch-icon', href='images/icons/favicon-2.html')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css')
+      
+    link(rel='apple-touch-icon', sizes='72x72', href='images/icons/favicon-72x72.html')
+    link(rel='apple-touch-icon', sizes='114x114', href='images/icons/favicon-114x114.html')
+    // Loading bootstrap css
+    link(type='text/css', rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')
+    link(type='text/css', rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oswald:400,700,300')
+
+    link(type='text/css', rel='stylesheet', href='css/asistencia/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css')
+    link(type='text/css', rel='stylesheet', href='css/asistencia/font-awesome/css/font-awesome.min.css')
+    link(type='text/css', rel='stylesheet', href='css/asistencia/bootstrap/css/bootstrap.min.css')
+    // LOADING STYLESHEET FOR PAGE
+    link(type='text/css', rel='stylesheet', href='css/asistencia/DataTables/media/css/jquery.dataTables.css')
+    link(type='text/css', rel='stylesheet', href='css/asistencia/DataTables/extensions/TableTools/css/dataTables.tableTools.min.css')
+    link(type='text/css', rel='stylesheet', href='css/asistencia/DataTables/media/css/dataTables.bootstrap.css')
+    // Loading style vendors
+    //link(type='text/css', rel='stylesheet', href='vendors/animate.css/animate.css')
+    //link(type='text/css', rel='stylesheet', href='vendors/jquery-pace/pace.css')
+    //link(type='text/css', rel='stylesheet', href='vendors/iCheck/skins/all.css')
+    //link(type='text/css', rel='stylesheet', href='vendors/jquery-notific8/jquery.notific8.min.css')
+    //link(type='text/css', rel='stylesheet', href='vendors/bootstrap-daterangepicker/daterangepicker-bs3.css')
+    // Loading style
+    link.default-style(type='text/css', rel='stylesheet', href='css/asistencia/css/themes/style1/orange-blue.css')
+    link#theme-change.style-change.color-change(type='text/css', rel='stylesheet', href='css/asistencia/css/themes/style1/orange-blue.css')
+    link(type='text/css', rel='stylesheet', href='css/asistencia/css/style-responsive.css')
+
+  body
+    div
+      a#totop(href='#')
+        i.fa.fa-angle-up
+      #header-topbar-option-demo.page-header-topbar
+        nav#topbar.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0; z-index: 2;')
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.sidebar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a#logo.navbar-brand(href='index-2.html')
+              span.fa.fa-rocket
+              span.logo-text µAdmin
+              span.logo-text-icon(style='display: none') µ
+          .topbar-main
+            a#menu-toggle.hidden-xs(href='#')
+              i.fa.fa-bars
+            ul.nav.navbar-nav
+              li.active
+                a(href='index-2.html') Dashboard
+              li
+                a.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                  | Layouts
+                  i.fa.fa-angle-down
+                ul.dropdown-menu
+                  li
+                    a(href='layout-left-sidebar.html') Left Sidebar
+                  li
+                    a(href='layout-right-sidebar.html') Right Sidebar
+                  li
+                    a(href='layout-left-sidebar-collapsed.html') Left Sidebar Collasped
+                  li
+                    a(href='layout-right-sidebar-collapsed.html') Right Sidebar Collasped
+                  li.dropdown-submenu
+                    a.dropdown-toggle(href='javascript:;', data-toggle='dropdown') More Options
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Second level link
+                      li.dropdown-submenu
+                        a.dropdown-toggle(href='javascript:;', data-toggle='dropdown') More Options
+                        ul.dropdown-menu
+                          li
+                            a(href='#') Third level link
+                          li
+                            a(href='#') Third level link
+                          li
+                            a(href='#') Third level link
+                          li
+                            a(href='#') Third level link
+                          li
+                            a(href='#') Third level link
+                      li
+                        a(href='#') Second level link
+              li.mega-menu-dropdown
+                a.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                  | UI Elements
+                  i.fa.fa-angle-down
+                ul.dropdown-menu
+                  li
+                    .mega-menu-content
+                      .row
+                        ul.col-md-4.mega-menu-submenu
+                          li
+                            h3 Neque porro quisquam
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Lorem ipsum dolor sit amet
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Consectetur adipisicing elit
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Sed ut perspiciatis unde omnis
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | At vero eos et accusamus et iusto
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Nam libero tempore cum soluta
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Et harum quidem rerum facilis est
+                        ul.col-md-4.mega-menu-submenu
+                          li
+                            h3 Neque porro quisquam
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Lorem ipsum dolor sit amet
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Consectetur adipisicing elit
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Sed ut perspiciatis unde omnis
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | At vero eos et accusamus et iusto
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Nam libero tempore cum soluta
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Et harum quidem rerum facilis est
+                        ul.col-md-4.mega-menu-submenu
+                          li
+                            h3 Neque porro quisquam
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Lorem ipsum dolor sit amet
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Consectetur adipisicing elit
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Sed ut perspiciatis unde omnis
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | At vero eos et accusamus et iusto
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Nam libero tempore cum soluta
+                          li
+                            a(href='#')
+                              i.fa.fa-angle-right
+                              | Et harum quidem rerum facilis est
+              li.mega-menu-dropdown.mega-menu-full
+                a.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                  | Extras
+                  i.fa.fa-angle-down
+                ul.dropdown-menu
+                  li
+                    .mega-menu-content
+                      .row
+                        .col-md-7
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              h3 Neque porro quisquam
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Lorem ipsum dolor sit amet
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Consectetur adipisicing elit
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Sed ut perspiciatis unde omnis
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | At vero eos et accusamus et iusto
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Nam libero tempore cum soluta
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Et harum quidem rerum facilis est
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              h3 Neque porro quisquam
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Lorem ipsum dolor sit amet
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Consectetur adipisicing elit
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Sed ut perspiciatis unde omnis
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | At vero eos et accusamus et iusto
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Nam libero tempore cum soluta
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Et harum quidem rerum facilis est
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              h3 Neque porro quisquam
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Lorem ipsum dolor sit amet
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Consectetur adipisicing elit
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Sed ut perspiciatis unde omnis
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | At vero eos et accusamus et iusto
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Nam libero tempore cum soluta
+                            li
+                              a(href='#')
+                                i.fa.fa-angle-right
+                                | Et harum quidem rerum facilis est
+                        .col-md-5.document-demo
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              a(href='#')
+                                i.fa.fa-info-circle
+                                span Introduction
+                            li
+                              a(href='#')
+                                i.fa.fa-download
+                                span Installation
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              a(href='#')
+                                i.fa.fa-cog
+                                span T3 Settings
+                            li
+                              a(href='#')
+                                i.fa.fa-desktop
+                                span Layout System
+                          ul.col-md-4.mega-menu-submenu
+                            li
+                              a(href='#')
+                                i.fa.fa-magic
+                                span Customization
+                            li
+                              a(href='#')
+                                i.fa.fa-question-circle
+                                span FAQs
+            
+              li.dropdown
+                a.dropdown-toggle(data-hover='dropdown', href='#')
+                  i.fa.fa-bell.fa-fw
+                  span.badge.badge-green 3
+                ul.dropdown-menu.dropdown-alerts
+                  li
+                    p You have 14 new notifications
+                  li
+                    .dropdown-slimscroll
+                      ul
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-blue
+                              i.fa.fa-comment
+                            | New Comment
+                            span.pull-right.text-muted.small 4 mins ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-violet
+                              i.fa.fa-twitter
+                            | 3 New Followers
+                            span.pull-right.text-muted.small 12 mins ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-pink
+                              i.fa.fa-envelope
+                            | Message Sent
+                            span.pull-right.text-muted.small 15 mins ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-green
+                              i.fa.fa-tasks
+                            | New Task
+                            span.pull-right.text-muted.small 18 mins ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-yellow
+                              i.fa.fa-upload
+                            | Server Rebooted
+                            span.pull-right.text-muted.small 19 mins ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-green
+                              i.fa.fa-tasks
+                            | New Task
+                            span.pull-right.text-muted.small 2 days ago
+                        li
+                          a(href='extra-user-list.html', target='_blank')
+                            span.label.label-pink
+                              i.fa.fa-envelope
+                            | Message Sent
+                            span.pull-right.text-muted.small 5 days ago
+                  li.last
+                    a.text-right(href='extra-user-list.html') See all alerts
+              li.dropdown
+                a.dropdown-toggle(data-hover='dropdown', href='#')
+                  i.fa.fa-envelope.fa-fw
+                  span.badge.badge-orange 7
+                ul.dropdown-menu.dropdown-messages
+                  li
+                    p You have 14 new messages
+                  li
+                    .dropdown-slimscroll
+                      ul
+                        li
+                          a(href='email-view-mail.html', target='_blank')
+                            span.avatar
+                              img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                            span.info
+                              span.name Jessica Spencer
+                              span.desc Lorem ipsum dolor sit amet...
+                        li
+                          a(href='email-view-mail.html', target='_blank')
+                            span.avatar
+                              img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                            span.info
+                              span.name
+                                | John Smith
+                                span.label.label-blue.pull-right New
+                              span.desc Lorem ipsum dolor sit amet...
+                        li
+                          a(href='email-view-mail.html', target='_blank')
+                            span.avatar
+                              img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                            span.info
+                              span.name
+                                | John Doe
+                                span.label.label-orange.pull-right 10 min
+                              span.desc Lorem ipsum dolor sit amet...
+                        li
+                          a(href='email-view-mail.html', target='_blank')
+                            span.avatar
+                              img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                            span.info
+                              span.name John Smith
+                              span.desc Lorem ipsum dolor sit amet...
+                        li
+                          a(href='email-view-mail.html', target='_blank')
+                            span.avatar
+                              img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                            span.info
+                              span.name John Smith
+                              span.desc Lorem ipsum dolor sit amet...
+                  li.last
+                    a(href='email-view-mail.html', target='_blank') Read all messages
+              li.dropdown
+                a.dropdown-toggle(data-hover='dropdown', href='#')
+                  i.fa.fa-tasks.fa-fw
+                  span.badge.badge-yellow 8
+                ul.dropdown-menu.dropdown-tasks
+                  li
+                    p You have 14 pending tasks
+                  li
+                    .dropdown-slimscroll
+                      ul
+                        li
+                          a(href='page-blog-item.html', target='_blank')
+                            span.task-item
+                              | Fix the HTML code
+                              small.pull-right.text-muted 40%
+                            .progress.progress-sm
+                              .progress-bar.progress-bar-orange(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%;')
+                                span.sr-only 40% Complete (success)
+                        li
+                          a(href='page-blog-item.html', target='_blank')
+                            span.task-item
+                              | Make a wordpress theme
+                              small.pull-right.text-muted 60%
+                            .progress.progress-sm
+                              .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
+                                span.sr-only 60% Complete (success)
+                        li
+                          a(href='page-blog-item.html', target='_blank')
+                            span.task-item
+                              | Convert PSD to HTML
+                              small.pull-right.text-muted 55%
+                            .progress.progress-sm
+                              .progress-bar.progress-bar-green(role='progressbar', aria-valuenow='55', aria-valuemin='0', aria-valuemax='100', style='width: 55%;')
+                                span.sr-only 55% Complete (success)
+                        li
+                          a(href='page-blog-item.html', target='_blank')
+                            span.task-item
+                              | Convert HTML to Wordpress
+                              small.pull-right.text-muted 78%
+                            .progress.progress-sm
+                              .progress-bar.progress-bar-yellow(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%;')
+                                span.sr-only 78% Complete (success)
+                  li.last
+                    a(href='page-blog-item.html', target='_blank') See all tasks
+              li.dropdown.topbar-user
+                a.dropdown-toggle(data-hover='dropdown', href='#')
+                  img.img-responsive.img-circle(src='../../../s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg', alt='')
+                  span.hidden-xs John Doe
+                  span.caret
+                ul.dropdown-menu.dropdown-user.pull-right
+                  li
+                    a(href='extra-profile.html')
+                      i.fa.fa-user
+                      | My Profile
+                  li
+                    a(href='page-calendar.html')
+                      i.fa.fa-calendar
+                      | My Calendar
+                  li
+                    a(href='email-inbox.html')
+                      i.fa.fa-envelope
+                      | My Inbox
+                      span.badge.badge-danger 3
+                  li
+                    a(href='#')
+                      i.fa.fa-tasks
+                      | My Tasks
+                      span.badge.badge-success 7
+                  li.divider
+                  li
+                    a(href='extra-lock-screen.html')
+                      i.fa.fa-lock
+                      | Lock Screen
+                  li
+                    a(href='extra-signin.html')
+                      i.fa.fa-key
+                      | Log Out
+              li#topbar-chat.hidden-xs
+                a.btn-chat(href='javascript:void(0)')
+                  i.fa.fa-comments
+                  span.badge.badge-info 3
+              li.dropdown.hidden-xs
+                // BEGIN THEME SETTING
+                a#theme-setting.dropdown-toggle(href='javascript:;', data-hover='dropdown', data-step='1', data-intro='<b>Header</b>, <b>sidebar</b>, <b>border style</b> and <b>color</b>, all of them can change for you to create the best', data-position='left')
+                  i.fa.fa-cogs
+                ul.dropdown-menu.dropdown-theme-setting.pull-right
+                  li
+                    h4.mtn Theme Styles
+                    select#list-style.form-control
+                      option(value='style1') Flat Squared style
+                      option(value='style2') Flat Rounded style
+                      option(value='style3') Flat Border style
+                  li
+                    h4.mtn Menu Styles
+                    select#list-menu.form-control
+                      option(value='sidebar-default') Menu style 1
+                      option(value='sidebar-colors') Menu style 2
+                      option(value='sidebar-icons') Menu style 3
+                      option(value='sidebar-collapsed') Menu style 4
+                  li
+                    h4.mtn Header & Sidebar
+                    select#list-header.form-control
+                      option(value='header-static') Static
+                      option(value='header-fixed') Fixed
+                  li
+                    h4.mtn Theme Colors
+                    ul#list-color.list-unstyled.list-inline
+                      li.green-dark(data-color='green-dark', data-hover='tooltip', title='Green - Dark')
+                      li.red-dark(data-color='red-dark', data-hover='tooltip', title='Red - Dark')
+                      li.pink-dark(data-color='pink-dark', data-hover='tooltip', title='Pink - Dark')
+                      li.blue-dark(data-color='blue-dark', data-hover='tooltip', title='Blue - Dark')
+                      li.yellow-dark(data-color='yellow-dark', data-hover='tooltip', title='Yellow - Dark')
+                      li.green-grey(data-color='green-grey', data-hover='tooltip', title='Green - Grey')
+                      li.red-grey(data-color='red-grey', data-hover='tooltip', title='Red - Grey')
+                      li.pink-grey(data-color='pink-grey', data-hover='tooltip', title='Pink - Grey')
+                      li.blue-grey(data-color='blue-grey', data-hover='tooltip', title='Blue - Grey')
+                      li.yellow-grey(data-color='yellow-grey', data-hover='tooltip', title='Yellow - Grey')
+                      li.yellow-green(data-color='yellow-green', data-hover='tooltip', title='Yellow - Green')
+                      li.orange-grey(data-color='orange-grey', data-hover='tooltip', title='Orange - Grey')
+                      li.pink-blue(data-color='pink-blue', data-hover='tooltip', title='Pink - Blue')
+                      li.pink-violet.active(data-color='pink-violet', data-hover='tooltip', title='Pink - Violet')
+                      li.orange-violet(data-color='orange-violet', data-hover='tooltip', title='Orange - Violet')
+                      li.pink-green(data-color='pink-green', data-hover='tooltip', title='Pink - Green')
+                      li.pink-brown(data-color='pink-brown', data-hover='tooltip', title='Pink - Brown')
+                      li.orange-blue(data-color='orange-blue', data-hover='tooltip', title='Orange - Blue')
+                      li.yellow-blue(data-color='yellow-blue', data-hover='tooltip', title='Yellow - Blue')
+                      li.green-blue(data-color='green-blue', data-hover='tooltip', title='Green - Blue')
+        
+      #wrapper
+
+        include panel_left
+       
+        #page-wrapper
+          // BEGIN TITLE & BREADCRUMB PAGE
+          #title-breadcrumb-option-demo.page-title-breadcrumb
+            .page-header.pull-left
+              .page-title CIIS
+            ol.breadcrumb.page-breadcrumb
+              li
+                i.fa.fa-home
+                a(href='index-2.html') Home
+                i.fa.fa-angle-right
+              li
+                a(href='#') Tables
+                i.fa.fa-angle-right
+              li.active DataTables
+            .btn.btn-blue.reportrange.hide
+              i.fa.fa-calendar
+              span
+              |  report 
+              i.fa.fa-angle-down
+              input(type='hidden', name='datestart')
+              input(type='hidden', name='endstart')
+            .clearfix
+          // END TITLE & BREADCRUMB PAGE
+          // BEGIN CONTENT
+          .page-content
+            .row
+              //-.col-lg-12
+                .note.note-success
+                  h4.box-heading Datatables
+                  p Main features from datatables: paging, search, sorter, filter
+                  p
+                    | Export tool work on Flash Environment, check other 
+                    a(href='table-export.html', target='_blank') Table Export
+                  p
+                    | To use "Edit" feature, please check it 
+                    a(href='table-editable.html', target='_blank') Editable
+              block content_asistencia
+                              
+                               
+        #footer
+          .copyright 2017 © todos los derechos reservados a la compañia Kincodi
+        // END FOOTER
+        // END PAGE WRAPPER
+    script(src='js/asistencia/jquery-1.10.2.min.js')
+    script(src='js/asistencia/jquery-migrate-1.2.1.min.js')
+    script(src='js/asistencia/jquery-ui.js')
+    // loading bootstrap js
+    script(src='css/asistencia/bootstrap/js/bootstrap.min.js')
+    script(src='css/asistencia/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js')
+    script(src='js/asistencia/html5shiv.js')
+    script(src='js/asistencia/respond.min.js')
+    
+    script(src='js/asistencia/slimScroll/jquery.slimscroll.js')
+    script(src='js/asistencia/jquery-cookie/jquery.cookie.js')
+    script(src='js/asistencia/iCheck/icheck.min.js')
+    script(src='js/asistencia/iCheck/custom.min.js')
+    //script(src='vendors/jquery-notific8/jquery.notific8.min.js')
+    //script(src='vendors/jquery-highcharts/highcharts.js')
+    //script(src='js/jquery.menu.js')
+    //script(src='vendors/jquery-pace/pace.min.js')
+    script(src='js/asistencia/holder/holder.js')
+    script(src='js/asistencia/responsive-tabs/responsive-tabs.js')
+    //script(src='vendors/jquery-news-ticker/jquery.newsTicker.min.js')
+    script(src='js/asistencia/moment/moment.js')
+    //script(src='vendors/bootstrap-datepicker/js/bootstrap-datepicker.js')
+    //script(src='vendors/bootstrap-daterangepicker/daterangepicker.js')
+    // CORE JAVASCRIPT
+    script(type='text/javascript' src='js/user.js')
+
+    script(src='css/asistencia/DataTables/media/js/jquery.dataTables.js')
+    
+    script(src='css/asistencia/DataTables/media/js/dataTables.bootstrap.js')
+    script(src='css/asistencia/DataTables/extensions/TableTools/js/dataTables.tableTools.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js')
+    //script(src='js/asistencia/qrcode.min.js')
+    script(src='js/asistencia/table-datatables.js')
+    script(src='js/asistencia/metisMenu/jquery.metisMenu.js')
+    script(src='js/asistencia/main.js')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    
+    //- /*script(src='https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js')*/
+    
+    script(src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js')*/
+    script(src='https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js')
+    script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js')
+    script(src='js/asistencia/qrcode.min.js')
+    
+    script.
+        $(document).ready(function() {
+
+         
+        })
+
+    script.
+      function createQr(data){
+
+        console.log("SDFSAFSDFADS",data)
+        new QRCode(document.getElementById("codeqr"),data)
+
+        /*var qrcode = new QRCode("qrcode", {
+          text: data,
+          width: 128,
+          height: 128,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+
+        });
+        
+        qrcode.clear(); 
+        qrcode.makeCode(code.value); 
+        */
+      }
+      function showResume(){
+        $.ajax({url: "/deuda", success: function(result){
+            console.log(result);
+            $('#paymentResume').val(result.pagos);
+            $('#debtResume').val(result.deuda);
+            $('#totalResume').val(result.total);
+            
+        }});
+      }
+      function showUsers(){
+        $.ajax({url: "/count_users", success: function(result){
+            console.log(result);
+            $('#esis_e').val(result["ESIS-E"]);
+            $('#esis_p').val(result["ESIS-P"]);
+            $('#puno_e').val(result["PUNO"]);
+            $('#puno_p').val(result["PUNO-P"]);
+            $('#ayacucho_e').val(result["AYACUCHO"]);
+            $('#ayacucho_p').val(result["AYACUCHO-P"]);
+            $('#uap_e').val(result["UAP"]);
+            $('#uap_p').val(result["UAP-P"]);
+            $('#upt_e').val(result["UPT"]);
+            $('#upt_p').val(result["UPT-P"]);
+            $('#unam_e').val(result["UNAM"]);
+            $('#unam_p').val(result["UNAM-P"]);
+            $('#ilo_e').val(result["ILO"]);
+            $('#ilo_p').val(result["ILO-P"]);
+            $('#student').val(result["Estudiante"]);
+            $('#profesional').val(result["Profesional y público en general"]);
+            $('#total_user').val(result["totalUser"]);
+            $('#total_delegation').val(result["totalDelegation"]);
+            
+        }});
+      }
+      function postAsistencia(dni){
+        $.ajax({url: "/asistencia?dni="+dni, success: function(result){
+            console.log(result);
+            toastr.success("Asistencia registrada");
+            $('#lista_usuarios').DataTable().ajax.reload();
+        }});
+      }
+      function showPhoto(data){
+        var last = data.substring(7, data.length);
+        console.log(last);
+        //window.location.href = window.location.protocol + "//" + window.location.host + "/" + "uploads/"+last;*/
+        window.open(window.location.protocol + "//" + window.location.host + "/" + "uploads/"+last, '_blank');
+      }
+      function editUser(data,name){
+        var inputUser = $('#userEdit');
+        var allname=$('#allnameEdit');
+        inputUser.val(data);
+        allname.text('Editar usuario :  '+name);
+        getUser(data);
+      }
+      function createPayment(data,name,debt){
+        var inputUser = $('#userPayment');
+        var allname=$('#allnamePayment');
+        inputUser.val(data);
+        allname.text('Pago [ '+name+' ]'+' Debe : '+' S/.'+debt);
+        getPayment(data);
+      }
+      function deletePayment(id){
+        debugger;
+        fetch("/pago/delete?id="+id,{
+            method: "GET",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            credentials: "same-origin"
+        }).then(response => {
+          //console.log(response.json());
+          if (response.ok) {
+            // preclose.click();
+            toastr.success("Pago Eliminado");
+            $('#lista_usuarios').DataTable().ajax.reload();
+            response.json().then(function (data) {
+              getPayment(data._id);
+              $('#allnamePayment').text('Pago [ '+data.name +' '+data.lastname+' ]'+' Debe : '+' S/.'+data.debt);
+            })
+          }
+          else {
+            toastr.error("Hubo un error");
+          }
+        }).catch(function(){
+          toastr.error("Hubo un error");
+        });
+      }
+      function getUser(user) {
+        console.log(user);
+        $.ajax({
+          url: '/usuario?user='+ user,
+          success:(function(data){
+            console.log(data);
+            $('#emailEdit').val(data.email);
+            $('#nameEdit').val(data.name);
+            $('#lastnameEdit').val(data.lastname);
+            $('#dniEdit').val(data.dni);
+            $('#typeEdit').val(data.type);
+            $('#institutionEdit').val(data.institution);
+            $('#delegationEdit').val(data.delegation);
+            $('#discountEdit').val(data.discount);
+            $('#cityEdit').val(data.city);
+            $('#cellphoneEdit').val(data.cellphone);
+            $('#descriptionEdit').val(data.description);
+          }),
+          error:(function(){
+            toastr.error("Hubo un error");
+          })
+        });
+      }
+      function getPayment(user) {
+        console.log(user);
+        var table_pagos=$("#lista_pagos").DataTable({
+          processing: true,
+          serverSide: true,
+          "ajax":{
+            url:"/usuario/pagos?user="+user,
+            dataSrc: function (json) {
+              var usuarios = json,
+              return_data = [];
+              console.log(json);
+              console.log(usuarios);
+              for (var i = 0,usuario; usuario = usuarios[i]; i++) {
+                  var data = {};
+                  data.orden  = i+1;
+                  data.date     = usuario.createdAt;
+                  data.type     = usuario.type;
+                  data.quantity  = usuario.quantity;
+                  
+                  data.actions ='<button id="delete_payment" onclick="deletePayment('+"'"+usuario._id+"'"+')" class="btn btn-info" data-toggle="modal" >Eliminar</button>';
+                  
+                  return_data.push(jQuery.extend(true, {}, data));
+                }
+                return return_data.reverse();
+            }
+          },
+          "columns": [
+            { "data": "orden", name:"orden" },
+            { "data": "date", name:"fecha" },
+            { "data": "type", name:"tipo" },
+            { "data": "quantity",name:"cantidad" },
+            { "data" : "actions",orderable: false, searchable: false}
+          ]
+      
+        });
+        table_pagos.destroy();
+      }
+    
+    script.
+      $(document).ready(function() {
+          $("#lista_usuarios").DataTable({
+            //"processing": true,
+            //"serverSide": true,
+            
+            //"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            //"pagingType": "full_numbers",
+            //"sPaginationType": "full_numbers",
+            //"bSearchable":true,
+            //"bFilter": true,
+            //dom: 'Bfrtip',
+            //buttons: [
+            //    'excelHtml5'
+            //],
+            //"bInfo": false,
+            dom: 'Bfrtip',
+            order:[0,"desc"],
+            buttons: [
+              'copyHtml5',
+             'excelHtml5',
+             'csvHtml5',
+             'pdfHtml5'
+           ],
+            "ajax":{
+              url:"/lista_asistencia",
+
+              dataSrc: function (json) {
+                stocksF = []
+                var usuarios = json,
+                return_data = [];
+                console.log(json);
+                console.log(usuarios);
+                for (var i = 0,usuario; usuario = usuarios[i]; i++) {
+                    var data = {};
+                    data.orden  = i+1;
+                    data.nombre     = usuario.user.name;
+                    data.apellido     = usuario.user.lastname;
+                    data.email  = usuario.user.email;
+                    data.dni       = usuario.user.dni;
+                    data.fecha       = usuario.user.createdAt.replace(/T/, ' '). replace(/\..+/, '');
+                    data.debt       = usuario.user.debt;
+                    data.assist       = usuario.assist? usuario.assist:'';
+                    
+                    data.actions ='<a id="edit_user" onclick="editUser('+"'"+usuario.user._id+"','"+usuario.user.name+" "+usuario.user.lastname+"'"+')" data-id="'+usuario.user.dni+'" class="btn btn-info" data-toggle="modal" data-target="#edtUserModal" title="Editar" ><i class="fa fa-edit"></i></a>'
+                    +'<a id="gen_photocheck"  data-id="'+usuario.user._id+'"  onclick="postAsistencia('+"'"+usuario.user.dni+"'"+')" class="btn btn-success"  title="Asistencia"><i class="fa fa-user"></i></button>'
+                    +'<a id="show_payment" onclick="createPayment('+"'"+usuario.user._id+"','"+usuario.user.name+" "+usuario.user.lastname+"','"+usuario.user.debt+"'"+')"   data-id="'+usuario.user._id+'" class="btn btn-primary" data-toggle="modal" data-target="#paymentUserModal" title="Pagos"><i class="fa fa-dollar"></i></a>';
+                    
+                    
+                    
+                    if(usuario.user.photo){
+                      data.actions+='<a onclick="showPhoto('+"'"+usuario.user.photo+"'"+')" data-id="'+usuario.user._id+'"  class="btn btn-info show_photo" title="Ver Foto"><i class="fa fa-instagram"></i></a>'
+                    }
+                    
+                    return_data.push(jQuery.extend(true, {}, data));
+                  }
+                  return return_data.reverse();
+              }
+            },
+         
+            "columns": [
+              { "data": "orden", name:"orden" },
+              { "data": "nombre", name:"nombre" },
+              { "data": "apellido", name:"apellido" },
+              { "data": "email",name:"email" },
+              { "data": "dni", name:"dni" },
+              { "data": "fecha", name:"fecha" },
+              { "data": "debt", name:"deuda" },
+              { "data": "assist", name:"asistencia" },
+              { "data" : "actions"}
+            ]
+        
+          });
+          /*
+          var table = $('#lista_usuarios').DataTable();
+          $('#inputSearch').on( 'keyup', function () {
+              table
+                  .columns( 2 )
+                  .search( this.value )
+                  .draw();
+          } );*/
+      } );
+//- /*
+//-     script.
+//-         $(document).ready(function() {
+//-           /*$('#dataTable').dataTable( {
+//-               'bSort': false,
+//-               'aoColumns': [ 
+//-                     { sWidth: "45%", bSearchable: false, bSortable: false }, 
+//-                     { sWidth: "45%", bSearchable: false, bSortable: false }, 
+//-                     { sWidth: "10%", bSearchable: false, bSortable: false } 
+//-               ],
+//-               "scrollY":        "200px",
+//-               "scrollCollapse": true,
+//-               "info":           true,
+//-               "paging":         true
+//-           } );*/
+//- 
+//- 
+//-             $("#lista_usuarios").DataTable({
+//-               processing: true,
+//-               serverSide: true,
+//-               "ajax":{
+//-                 url:"/lista_asistencia",
+//-                 dataSrc: function (json) {
+//-                   console.log("asd");
+//-                   stocksF = []
+//-                   var usuarios = json,
+//-                   return_data = [];
+//-                   console.log(json);
+//-                   console.log(usuarios);
+//-                   for (var i = 0,usuario; usuario = usuarios[i]; i++) {
+//-                       var data = {};
+//-                       data.orden  = i+1;
+//-                       data.nombre     = usuario.user.name;
+//-                       data.apellido     = usuario.user.lastname;
+//-                       data.email  = usuario.user.email;
+//-                       data.dni       = usuario.user.dni;
+//-                       data.phone       = usuario.user.cellphone;
+//-                       data.debt       = usuario.user.debt;
+//-                       data.assist       = usuario.assist;
+//- 
+//-                       data.actions ='<a id="edit_user"  data-id="'+usuario.user._id+'" class="btn btn-info" data-toggle="modal" data-target="#edtUserModal" ><i class="fa fa-edit"></i></a>'
+//-                       +'<a id="gen_photocheck" data-id="'+usuario.user._id+'" class="btn btn-success" data-toggle="modal" data-target="#btnFotoCheckModal"><i class="fa fa-user"></i></a>'
+//-                       +'<button id="show_photo" data-id="'+usuario.user._id+'"  class="btn btn-info"><i class="fa fa-instagram"></i></button>'
+//-                       +'<button id="show_payment" data-id="'+usuario.user._id+'" class="btn btn-primary" data-toggle="modal" data-target="#paymentUserModal"><i class="fa fa-dollar"></i></button>';
+//- 
+//-                       return_data.push(jQuery.extend(true, {}, data));
+//-                     }
+//-                     return return_data;
+//-                 }
+//-               },
+//-               "columns": [
+//-                 { "data": "orden", name:"orden" },
+//-                 { "data": "nombre", name:"nombre" },
+//-                 { "data": "apellido", name:"apellido" },
+//-                 { "data": "email",name:"email" },
+//-                 { "data": "dni", name:"dni" },
+//-                 { "data": "phone", name:"phone" },
+//-                 { "data": "debt", name:"deuda" },
+//-                 { "data": "assist", name:"asistencia" },
+//-                 { "data" : "actions",orderable: false, searchable: false}
+//-               ]
+//- 
+//-             });
+//-         } );*/
+//-

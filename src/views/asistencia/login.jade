@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1')
+    meta(property='fb:app_id', content='1115877665114558')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='http://www.ciistacna.com/')
+    meta(property='og:title', content='ciis tacna')
+    meta(property='og:image', content='http://www.ciistacna.com/images/fbciis.png')
+    meta(property='og:description', content='ciis')
+
+    title XVIII Congreso Internacional de Informática y Sistemas
+   
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.css', rel='stylesheet', type='text/css')
+
+    link(rel='stylesheet', href='/css/asistencia.css')
+
+    body
+            .container
+                .card.card-container
+                    img#profile-img.profile-img-card(src='//ssl.gstatic.com/accounts/ui/avatar_2x.png')
+                    p#profile-name.profile-name-card
+                    form.form-signin(method="post", action="/postlogin")
+                      span#reauth-email.reauth-email
+                      input#emailLogin.form-control(type='text', name='email',placeholder='Email', required='', autofocus='')
+                      input#passwordLogin.form-control(type='password', name='password',placeholder='Password', required='')
+                      button#submitLogin.btn.btn-lg.btn-primary.btn-block.btn-signin(style="margin-top:20px", type='submit') Iniciar Sesion
+                    
+                    a.forgot-password(href='#' style="margin-top:20px")
+                    | Forgot the password?
+                
+
+    script(src='https://code.jquery.com/jquery-3.2.1.js')
+    script(src='js/bootstrap.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js")
+    script.
+      /*$('#submitLogin').click(function(e){
+        var email= $('#emailLogin').val();
+        var password = $('#passwordLogin').val();
+
+        var data= {
+          'email' : email,
+          'password': password
+        }
+        console.log(data);
+        if(email && password ){
+
+          $.ajax({
+              url: '/postLogin',
+              type: "POST",
+              data:JSON.stringify(data),
+              contentType:"application/json; charset=utf-8",
+            success:(function(data){
+              console.log("OK")
+              console.log("OK");
+              toastr.success("Bienvenido");
+              
+            }),
+            error:(function(){
+              toastr.error("Hubo un error");
+            }),
+            always:(function(){
+              $('#emailLogin').val('');
+              $('#passwordLogin').val('');
+            })
+          })
+        }
+      })*/
+  

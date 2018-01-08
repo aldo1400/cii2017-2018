@@ -1,0 +1,169 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+}
+
+#c-slider{
+	position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#slider{
+	height: 100%;
+	width: 400%;
+}
+#slider section	{
+    width: 25%;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+#slider img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#btn-prev, #btn-next {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	z-index: 50;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 40px;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	font-family: monospace;
+	
+}
+
+#btn-prev:hover, #btn-next:hover{
+	background: rgba(255, 255, 255, 1);
+}
+
+#btn-prev{
+	left: 10px;
+}
+
+#btn-next{
+	right: 10px;
+}
+
+@media screen and (min-width: 768px){
+	#btn-prev, #btn-next{
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 2em;
+		font-weight: bold;
+	}
+}
+
+.fixed-nav-bar {
+    position: fixed;
+    padding: .5em 4em 1em 1em;
+    z-index: 900;
+    width: 100%;
+    /*height: 4.7em;*/
+    background-color: #403E3E;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+img.logo {
+    margin-top: 0.5em;
+    width: 4.5em;
+    height: 2em;
+    display: inline-block;
+}
+
+ul.menu-items li a {
+    color: #f2f2f2;
+    background-color: #403E3E;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+
+}
+
+@media screen and (min-width: 700px){
+.fixed-nav-bar {
+    padding: .5em 2em 1em 2em;
+}
+@media screen and (min-width: 320px){
+.fixed-nav-bar {
+}
+/******* BUSQUEDA*/
+.results-searcher .searcher-form {
+    display: flex;
+    margin: 0em 0em 3em 0em;
+}
+
+.searcher-form {
+    display: flex;
+    margin: .5em 0 0 3em;
+    transition: 0.3s;
+}
+
+.search-btn-white {
+    background-image: url(img/search.svg);
+    background-color: white;
+}
+
+.search-btn {
+    position: relative;
+    background-image: url(img/search-white.svg);
+    background-color: #f6d300;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2.2em;
+    height: 2.2em;
+}
+
+@media screen and (min-width: 600px){
+.results-searcher .searcher-input {
+    width: 33em;
+}
+
+.radio{
+	display: flex;
+}
+.radio1 {
+    margin-right: 10px;
+}
+
+
+
+
+
+

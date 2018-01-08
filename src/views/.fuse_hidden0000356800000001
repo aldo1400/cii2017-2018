@@ -1,0 +1,589 @@
+extends layout
+
+block content
+  section#index.section.section-page
+    article#countdown
+      .container_countdown_unit
+        span#days.countdown_unit
+        span.countdown_unit_label  Dias
+      span.separator
+      .container_countdown_unit
+        span#hours.countdown_unit
+        span.countdown_unit_label  Horas
+      span.separator
+      .container_countdown_unit
+        span#minutes.countdown_unit
+        span.countdown_unit_label  Minutos
+      span.separator
+      .container_countdown_unit
+        span#seconds.countdown_unit
+        span.countdown_unit_label  segundos
+    h1
+      span.highlighted CONGRESO INTERNACIONAL 
+      span  DE INFORMATICA Y SISTEMAS    
+      span.subtitle Un evento al cual no debes faltar,
+      span.subtitle2 el mejor evento tecnologico del sur del Peru
+    .subscription
+   
+      //-input#email(type='email', placeholder='Tu email')
+  
+      //-button#subscribe.btn-outline.lg(type='button')  Registrate
+   
+      button#preRegisterBtn.btn-outline.lg(href='#preRegisterModal')  Preinscríbete
+      br
+    //
+      button#preRegisterConcurseBtn.btn-outline-chall.lg(href='#preRegisterConcurseModal')
+        | Preinscríbete
+        | al concurso de programación
+  footer
+    
+  #preRegisterModal
+    .close-preRegisterModal
+      img.closebt(src='img/closebt.svg', alt='')
+    .modal-content
+      form#preRegisterForm
+        h3  Preinscripción
+        label
+          | Tu Email
+          input#preRegisterEmail(style='color:black;', type='email', required='')
+        label
+          | Tus Nombres
+          input#preRegisterFirstName.capitalize(style='color:black;', type='email', required='')
+        label
+          | Tus Apellidos
+          input#preRegisterLastName.capitalize(style='color:black;', type='email', required='')
+        label
+          | Tu DNI
+          input#preRegisterDNI(style='color:black;', type='email', required='')
+        label Tipo de inscripción 
+        select#preRegisterType.form-control(name='tipo')
+          option(value='PROFESIONAL') Profesional y público en general
+          option(value='PROFESIONAL COLEGIADO') Ing. Sistemas colegiado
+          option(value='ESTUDIANTE') Estudiante
+        label
+          | Tu ciudad
+          input#preRegisterCity.capitalize(type='text', style='color:black;', required='')
+        //-label
+          | Foto Voucher (Nro Cta: 540-38259813-0-99 BCP a nombre de : VELASQUEZ CRUZ YOBANA )
+          input#preRegisterVoucher(type='file', accept='image/*', required='')
+        label
+          | Tu número de celular
+          input#preRegisterCellphone(type='text', style='color:black;', required='')
+      button#submitPreRegister.btn-outline-inverse.green(disabled='') Enviar
+  #preRegisterConcurseModal
+    .close-preRegisterConcurseModal
+      img.closebt(src='img/closebt.svg', alt='')
+    .modal-content
+      form#preRegisterForm.preRegisterConcurseForm
+        h3  Preinscripción al concurso de programación
+        label
+          | Nombre del equipo
+          input#preRegisterEmail(style='color:black;', name='team', type='text', required='')
+        label Participantes
+        .participant-temp.hide
+          div
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='DNI', placeholder='DNI', type='text')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='name', placeholder='Nombres', type='text')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='lastname', placeholder='Apellidos', type='text')
+            div(style='display:inline-block;width:10%;')
+              img.closebt.delete-participant(width='20', src='img/closebt.svg', alt='')
+        .participant
+          div
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='DNI', placeholder='DNI', type='text', required='')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='name', placeholder='Nombres', type='text', required='')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='lastname', placeholder='Apellidos', type='text', required='')
+            div(style='display:inline-block;width:10%;')
+        .participant
+          div
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='DNI', placeholder='DNI', type='text', required='')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='name', placeholder='Nombres', type='text', required='')
+            div(style='display:inline-block;width:25%;')
+              input#preRegisterLastName.capitalize(style='color:black;width:90%;', name='lastname', placeholder='Apellidos', type='text', required='')
+            div(style='display:inline-block;width:10%;')
+        button.btn-outline.add-participant(type='button', name='button') Añadir Participante
+        br
+        br
+        button#submitPreConcurseRegister.btn-outline-inverse.green(style='width:50%;', type='submit')
+          | Enviar
+  #animatedModal
+    .close-animatedModal
+      img.closebt(src='img/closebt.svg', alt='')
+    .modal-content
+      form#contactForm
+        h3  Cuentanos tus dudas!
+        label
+          | Tu Email
+          input#contactEmail(style='color:black;', type='email')
+        label
+          | Tu Nombre
+          input#contactName(style='color:black;', type='text')
+        label
+          | Tu consulta 
+          textarea#contactSubject(style='color:black;')
+      button#submitContact.btn-outline-inverse(disabled='') Enviar
+  
+  //section#speakers
+    h2(style='font-size:40px;') Ponentes
+    diw.row
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/hashimoto.jpeg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='https://www.ime.usp.br/~ronaldo/')
+                | Msc. Ronaldo
+                | Fumio
+                | Hashimoto
+            span.bold Universidad de São Paulo - Brasil
+            br
+            span
+              | Profesor asociado al Departamento de Ciencias de la Computación y el Instituto de Matemáticas y Estadística
+          p.mb0
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/luiscaceres.png', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(href='#speakers')  Dr. Luis Marco Cáceres Alvarez
+            span.bold Universidad de Tarapacá - Chile
+            br
+            span Doctor en Ciencias de la Computación
+          p.mb0
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/aracena.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='https://cl.linkedin.com/in/sebastian-andrés-aracena-aguirre-79194884')
+                | Mgr. Sebastian Aracena Aguirre
+            span.bold Universidad de Tarapacá - Chile
+            br
+            span Desarrollador de videojuegos
+          p.mb0
+    .row
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/rodrigocornejo.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='#')
+                | Mgr. Rodrigo Cornejo
+            span.bold Universidad de Tarapacá - Chile
+            br
+            span Desarrollador de software PAR Explora Arica y Parinacota en CONICYT
+          p.mb0
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/ankit.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='#')
+                | MTech. MCA. Ankit Kumar
+            span.bold INICTEL
+            br
+            span
+              | Jefe del Centro de Excelencia en TI India - Perú (IPCEIT) en Lima, Perú, América del Sur.
+          p.mb0
+    .row
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/anacuadros.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='http://cs.ucsp.edu.pe/people.html#anamariacuadrosucspedupe')
+                | Dra. Ana Maria Cuadros
+                | Valdivia
+            span.bold  Universidad Nacional de San Agustín - Arequipa
+            br
+            span Doctora en Ciencias de la Computación
+            br
+            span
+              | Magister en Ciencias de la Computación en el Instituto de Ciencias Matemáticas y de Computación en la Universidad de São Paulo
+          p.mb0
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/luiszuloaga.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='https://pe.linkedin.com/in/luis-zuloaga-rotta-b0087510b')
+                | Msc. Luis Zuloaga Rotta
+            span.bold Universidad Nacional de Ingeniería - Lima
+            br
+            span Profesor del Área de Sistemas e Informática
+            br
+            span Consultor en proyectos, sistemas de información y gestión de las T.I.
+          p.mb0
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/dennischavez.png', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(target='_blank', href='https://pe.linkedin.com/in/dennis-larry-quispe-chávez-15ab5512')
+                | Lic. Larry Dennis
+                | Quispe Chavez
+            span.bold  Universidad Nacional de San Agustín - Arequipa
+            br
+            span Licenciado en Educación Especialidad Físico-Matemática
+            br
+            span Bachiller en Ingeniería de Sistemas
+          p.mb0
+    .row
+      article.col-sm-6.col-md-4.mb1
+        .profile.text-center
+          img.img-circle.img-responsive.center-block(src='/img/kelvin.jpg', width='330', alt='Pic')
+          .title.mb16
+            h4.uppercase.mb0.bold
+              a.white_link(href='#speakers')  Lic. Kelvin Macedo Ylachoque
+            span.bold TATA Consulting Services
+            br
+            span Tecnologías IBM en procesos de desarrollo de software
+          p.mb0
+  //section#schedule.section.section-page
+    h1(style='color:#00aad4;font-size: 2.5em;font-weight:bolder ;padding-bottom: 1em;padding-top:.2em;')
+      | Cronograma de
+      | Ponencias
+    .table-responsive
+      table(border='0', style='margin:0 auto;padding:20px;', cellpadding='0', cellspacing='0')
+        tr.days
+          th
+          th Lunes
+          th Martes
+          th Miercoles
+          th Jueves
+          th Viernes
+        tr
+          td.time 9.00
+          td.cs335.blue(rowspan='5')  Registro y Entrega de materiales
+          td.cs335.navy(colspan='4') Registro de ingreso
+        tr
+          td.time 9:30
+          td.cs335.red.lab(rowspan='2')
+            | Mgr. Rodrigo Cornejo
+            span.bold Universidad de Tarapacá
+            span
+              | "Sistema de información para la gestión del transporte con tecnologías de libre disposición"
+            span.bold CHILE
+          td.cs335.green.lab(rowspan='2')
+            | Mgr. Sebastian Aracena
+            span.bold CHILE
+            span "Desarrollo de videojuegos"
+          td.cs335.red(rowspan='2')
+            | Alexis Genaro Barahona Peñaranda
+            span.bold Universidad de Tarapacá
+            span "Control de centro multimedia a través de gestos faciales"
+          td.purple(rowspan='2')
+            | Ing. Cristhian Córdova Fernández Baca
+            span OSIPTEL
+            span "Banda Ancha de Telefonía Móvil"
+        tr
+          td.time 10:30
+        tr
+          td.time 11:30
+          td.cs335.orange(rowspan='2')
+            | Ing. Alfredo Paz
+            span.bold Universidad Nacional de San Agustin Arequipa
+          td.cs335.blue(rowspan='2')
+            | MTech. MCA. Ankit Kumar 
+            br
+            span.bold  INICTEL
+            span
+              | Jefe del Centro de Excelencia en TI India - Perú (IPCEIT) en Lima, Perú, América del Sur.
+            |                     {{!--  MSc. Juan Carlos Valdeiglesias
+            span "Computacion en la niebla"
+            span.bold Arequipa
+            |  --}}
+          td.cs335.green.lab(rowspan='2')
+            | Ing. Victor Hugo Coras Ávila
+            span.bold UNIVERSIDAD ESAN
+            span Subgerente Adjunto de Riesgo de Crédito en Banco de Crédito BCP
+            span "Data Mining"
+          td.navy(rowspan='2')
+            | Mgr. Eldon Mark Flores Mamani
+            span “Datastage: ETL en Datawarehouse”
+        tr
+          td.time 12.30
+        tr
+          td.time 13.00
+          td.cs426.purple(colspan='5', rowspan='2')  Almuerzo
+        tr
+          td.time 14.00
+        tr
+          td.time 15.00
+          td.md303.blue(rowspan='1')  Registro y Entrega de materiales
+          td.green(rowspan='2')
+            | DR. Ariane Álvarez
+            span Cuba
+          td.blue(rowspan='2')
+            | Dra. Ana cuadros
+            span.bold Universidad Católica San Pablo de Arequipa 
+            span "Mapeamiento visual interactivo de grandes conjuntos de datos"
+          td.navy(colspan='', rowspan='2', headers='')
+            | Dr. Luis Marco Caceres Alvarez
+            span.bold Universidad de Tarapaca
+          td.green(rowspan='2')
+            | Mgr. Dennis Quispe Chavez
+            span "Empresas de servicios de TI y su proceso de desarrollo de software"
+        tr
+          td.time 16.00
+          td.cs335.navy(rowspan='2')
+            | Ceremonia de Inaguración y Ponencia Internacional
+        tr
+          td.time 17.00
+          td.cs335.purple(colspan='4') Break
+        tr
+          td.time 17.30
+          td.green(rowspan='4')
+            | Ing Jorge Pacheco Linares
+            span
+              | Director técnico de Ciencias y aplicaciones espacialesde la CONIDA - La Comisión Nacional de Investigación y Desarrollo Aeroespacial
+          td.cs240.blue(rowspan='4')
+            | CONVERSATORIO “Impacto de las tecnologías y didáctica en la educación”- PANEL Internacional
+          td.red(rowspan='4')
+            | Ing. Luis Zuloaga
+            span.bold UNI
+            span "Futuro del IoT"
+          td.cs240.orange(rowspan='4')
+            | Msc. Ronaldo Fumio
+            span Universidad de São Paulo - Brasil
+          td.cs240.blue(rowspan='4')
+            | Kelvin Macedo Ylachoque
+            span
+              | "Tecnologías IBM en
+              | procesos de desarrollo de Software"
+        tr
+          td.time 18.00
+        tr
+          td.time 19.00
+        tr
+          td.time 19.30
+        tr
+          td.time 21:30
+          td
+          td
+          td
+          td
+          td.red(rowspan='2')
+            | Ceremonia de Clausura
+            | y Premiación de Concurso de Programación
+    h1(style='color:#00aad4;font-size: 2.5em;font-weight:bolder ;padding-bottom: 1em;padding-top:1.5em;')
+      | Cronograma de
+      | Talleres
+    .table-responsive
+      table(border='0', style='margin:0 auto;padding:20px;', cellpadding='0', cellspacing='0')
+        tr.days
+          th
+          th Lunes
+          th Martes
+          th Miercoles
+          th Jueves
+          th Viernes
+        tr
+          td.time 9.00
+          td.cs335.blue(rowspan='5')  Registro y Entrega de materiales
+          td.cs335.navy(colspan='4') Registro de ingreso
+        tr
+          td.time 9:30
+          td.cs335.orange.lab(rowspan='2')
+          td.cs335.orange.lab(rowspan='2')
+          td.cs335.orange(rowspan='2')
+          td.orange(rowspan='2')
+        tr
+          td.time 10:30
+        tr
+          td.time 11:30
+          td.cs335.orange(rowspan='2')
+          td.cs335.blue(rowspan='2')
+          td.cs335.orange.lab(rowspan='2')
+          td.orange(rowspan='2')
+        tr
+          td.time 12.30
+        tr
+          td.time 13.00
+          td.cs426.purple(colspan='5', rowspan='2')  Almuerzo
+        tr
+          td.time 14.00
+        tr
+          td.time 15.00
+          td.md303.blue(rowspan='1')  Registro y Entrega de materiales
+          td.green(rowspan='2')
+            | Concurso de Programación
+          td.blue(rowspan='2')
+          td.navy(colspan='', rowspan='2', headers='')
+            | Taller 
+            br
+            |                     MSc. Edwin Antonio Hinojosa Ramos 
+            br
+            |                     "IMPRESORA 3D"
+          td.blue(rowspan='2')
+        tr
+          td.time 16.00
+          td.cs335.navy(rowspan='2')
+            | Ceremonia de Inaguración y Ponencia Internacional
+        tr
+          td.time 17.00
+          td.cs335.purple(colspan='4') Break
+        tr
+          td.time 17.30
+          td.green(rowspan='4')
+          td.cs240.green(rowspan='4')
+          td.green(rowspan='4')
+          td.cs240.orange(rowspan='4')
+            | Taller 
+            br
+            |                     MSc. Ludmer Edward Arcaya Arhuata 
+            br
+            |                     "DATA MINING CON ARBOLES DE DECISION"
+          td.cs240.blue(rowspan='4')
+            | Taller 
+            br
+            |                     Lic. Dennis Larry Quispe Chavez 
+            br
+            |                     "Bussiness Inteligence - Orientado DataWareouse"
+        tr
+          td.time 18.00
+        tr
+          td.time 19.00
+        tr
+          td.time 19.30
+        tr
+          td.time 21:30
+          td
+          td
+          td
+          td
+          td.red(rowspan='2')
+            | Ceremonia de Clausura
+            | y Premiación de Concurso de Programación
+    h2.baseProgC
+      a.baseProg(download='', href='/doc/bases-CProg.docx')
+        | >> Bases del concurso de programación <<
+  // Pricing Table Section
+  //section#pricing-table.section-page
+    .container
+      h2(style='font-size:40px;') Inversión
+      .table-responsive
+        table#price.table.table-prices
+          thead
+            tr
+              td
+              td
+                | Hasta el 15 de Oct.
+              td
+                | Hasta el 7 de Nov.
+              td
+                | Talleres
+          tbody
+            tr
+              td
+                | ESTUDIANTES
+              td
+                | S/. 80.00
+              td
+                | S/. 100.00
+              td
+                | S/. 20.00
+            tr(style='background:transparent;')
+              td
+                | PROFESIONALES
+              td
+                | S/. 100.00
+              td
+                | S/. 120.00
+              td
+                | S/. 40.00
+    h3 Nro Cta BCP: 540-35555839-0-12 (Yeny Laquita)
+    h4  Los depósitos hechos fuera de Tacna, deben adicionar S/. 7.50 de comisión
+
+  //-section#topics.section.section-page
+    h2 Temario
+    article
+      picture
+        source(src='med-res.jpg')
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+    article
+      picture
+        source(src='med-res.jpg')
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+    article
+      picture
+        source(src='med-res.jpg')
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+    article
+      picture
+        source(src='med-res.jpg')
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+  //-section#sponsors.section.section-page
+    h2 Colaboradores
+    article
+      picture
+        source(src='med-res.jpg')
+    article
+      picture
+        source(src='med-res.jpg')
+    article
+      picture
+        source(src='med-res.jpg')
+    article
+      picture
+        source(src='med-res.jpg')
+  
+  //-section#subscription
+    h2 Suscríbete y enterate de las actualizaciones!
+    input#email(type='email', placeholder='Tu email')
+    button#subscribe(type='button') Suscribirme
+
+  //-section#contact
+    article#contact_info
+      ul
+        li
+          i
+          |  999 999999
+        li
+          i
+          |  999 999999
+        li
+          i
+          |  999 999999
+        li
+          i
+          |  Direccion
+        li
+          i
+          |  ciis.tacna@gmail.com
+    form(action='mailto:you@yourdmainhere.com', method='post', enctype='text/plain')
+      input(type='text', name='name', placeholder='Tu nombre')
+      input(type='email', name='email', placeholder='Tu email')
+      input(type='text', name='subject', placeholder='Asunto')
+      textarea(name='text', placeholder='Escribenos tu duda ')
+ 
+  section#auspiciadores
+    //h2(style='font-size:40px;color:#00aad4;') Auspiciadores
+    //img(src='/img/osiptel.png', alt='')
+    //img(src='/img/postgrado.gif', alt='')
+    //img(src='/img/flores.jpg', alt='')
+    //img(src='/img/cip.png', alt='')
+    //img(src='/img/apeis.png', alt='')
+    //img(src='/img/fontes.jpg', alt='')
+    //img(src='/img/minsur.png', alt='')
+    //img(src='/img/piscoscuneo.jpg', alt='')
+    h2(style='font-size:40px;color:#00aad4;padding-top: 50px;') Organizadores
+    img(src='/img/agile/logoesis.png', alt='')
+    img(src='/img/agile/logounjbg.png', alt='')
+  section#map

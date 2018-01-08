@@ -1,0 +1,74 @@
+#edtUserModal.modal.fade(role='dialog')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          h4#allnameEdit.modal-title Editar Usuario
+          input#userEdit(type='hidden')
+          button#closeEdit.close(type='button', data-dismiss='modal') ×
+        .modal-body
+          .row
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Nombre:
+                      input#nameEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Apellido:
+                      input#lastnameEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Email:
+                      input#emailEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') DNI:
+                      input#dniEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Telefono - Celular:
+                      input#cellphoneEdit.form-control(type='')  
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Ciudad:
+                      input#cityEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Institución:
+                      input#institutionEdit.form-control(type='')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Delegacion:
+                      select#delegationEdit.form-control(name='type')
+                        option(value="") Ninguna
+                        option(value="ESIS-E") ESIS-Estudiante
+                        option(value="ESIS-P") ESIS-Profesional
+                        option(value="PUNO") PUNO
+                        option(value="PUNO-P") PUNO-Profesional
+                        option(value="AYACUCHO") AYACUCHO
+                        option(value="AYACUCHO-P") AYACUCHO-Profesional
+                        option(value="UAP") UAP
+                        option(value="UAP-P") UAP-Profesional
+                        option(value="UPT") UPT
+                        option(value="UPT-P") UPT-Profesional
+                        option(value="UNAM") UNAM
+                        option(value="UNAM-P") UNAM-Profesional
+                        option(value="ILO") ILO
+                        option(value="ILO-P") ILO-Profesional
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Tipo de inscripción:
+                      select#typeEdit.form-control(name='type')
+                        each type in types
+                          option(value=type._id) #{type.name}
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Descuento:
+                      input#discountEdit.form-control(type='number')
+              .col-md-6
+                  .form-group
+                      label(for='pwd') Descripción:
+                      textarea#descriptionEdit.form-control(type='')
+        .modal-footer
+          input#submitEdit.btn.btn-primary(type='button',value="Editar")
+          button.btn.btn-default(type='button', data-dismiss='modal') Close
+          

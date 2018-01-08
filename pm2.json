@@ -1,0 +1,20 @@
+
+{
+    "apps": [{
+        "name" : "CLIENT",
+        "script" : "./src/app.js",
+        "node_args": ["--harmony","--max_old_space_size=500"],
+        "port": "3333",
+        "watch": "./src",
+        "ignore_watch": ["./src/stylus", "./src/public"],
+        "watch_options": {
+            "usePolling": true
+        },
+        "error_file": "./logs/app-error.log",
+        "out_file": "./logs/app-out.log",
+        "env": {
+            "NODE_ENV": "development"
+        }
+    }]
+}
+|

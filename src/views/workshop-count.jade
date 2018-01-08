@@ -1,0 +1,34 @@
+extends layout
+
+
+block content
+  footer
+  section#pricing-table.section-page
+    .container
+      h2.title-list(style='font-size:40px;') PRE-INSCRITOS TALLER - CIIS
+      .table-responsive
+        table#listPM.table.table-prices
+          thead
+            tr
+              td
+                | Taller
+              td
+                | Inscritos
+          if   user
+            tbody
+              each users in user
+                tr
+                  td
+                    h4  #{users.name}
+                  td
+                    h4  #{users.count}
+                  ul
+      button.list-button(onclick="tableToExcel('listPM','POSTMASTER : LISTA DE PRE-INSCRITOS')") EXPORTAR
+      //- img(src='http://localhost:3000/uploads\\KUPELHHQ1HjvWKoHRkeZ4FM9zG4F3X2i.png', height='100', width='100')
+      //- 
+      //- form#photoForm(method="post",name="photo",action='photo',onsubmit='createPhoto()', enctype="multipart/form-data")
+      //-   h3  Foto
+      //-     | Tu foto de boleta
+      //-     input#photoUp(type='file',name='photo', style='color:black;', required='')
+      //- input(type='submit',name='submit',value='Enviar')
+      

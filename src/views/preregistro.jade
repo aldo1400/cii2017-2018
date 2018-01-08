@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title registro
+    link(rel='stylesheet', href='css/alvaro.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+
+    body#index-secction
+                    
+        .section.registro-white(style="margin-top:60px;margin-left:90px;margin-right:90px")
+            .col-md-12(style="margin-bottom:15px")
+                         h2.register-title(style="padding:15px")
+                            span PREREGISTRO
+               
+            .row(style="padding-left:100px;padding-right:100px;padding-top:20px;padding-bottom:20px")
+                
+                    
+                            
+                    .col-md-4(style="border-color:black")
+                        label(for="") seleccione el vauchers
+                        img(src="images/preview_voucher.jpg" id="blah" style="height: 280px;width: 279px")
+                        input.input-file1(type='file' onchange="readURL(this)")
+                    
+                    .col-md-8
+                        .intro-form
+                            .col-md-6
+                                .form-group
+                                    label(for="") Tu email
+                                    input.form-control(type="text")
+                                .form-group
+                                    label(for="") Tus nombres
+                                    input.form-control(type="text")
+                                .form-group
+                                    label(for="") Tus apellidos 
+                                    input.form-control(type="text")
+                            .col-md-6
+                                .form-group
+                                    label(for="") Tu DNI
+                                    input.form-control(type="text")
+                                .form-group
+                                    label(for="") Tu celular
+                                    input.form-control(type="text") 
+                                .form-group
+                                    label(for="") Tu ciudad
+                                    input.form-control(type="text")
+                            .col-md-12
+                                .form-group                              
+                                    label(for="") Tipo de inscripcion 
+                                    select.form-control(type="text")  
+                                        option(value='PROFESIONAL') Profesional y público en general
+                                        //- option(value='PROFESIONAL COLEGIADO') Ing. Sistemas colegiado
+                                        option(value='ESTUDIANTE') Estudiante 
+                    .col-md-12
+                        button.btn.btn-info.pull-right() Enviar                 
+    script(src="js/jquery.min.js")      
+    script(src="js/bootstrap.min.js")
+    script(src="js/index.js")
+    footer(style="display:flex;margin-top:20px")
+      div
+        | Universidad Nacional Jorge Basadre Grohmann
+      div
+        | Teléfono: (052) 583000 anexo 2005

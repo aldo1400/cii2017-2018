@@ -1,0 +1,48 @@
+extends layout
+block content_asistencia
+    include pagos
+    include create 
+    include edit
+    include fotocheck
+    include resume 
+    include resume_usuario 
+    .col-lg-12
+        .portlet.box
+            .portlet-header
+                .caption USUARIOS
+            .portlet-body
+                .row.mbm
+                    .col-lg-12
+                        .table-responsive
+                            button.btn.btn-success(type='button', data-toggle='modal', data-target='#createUserModal') Crear Usuario  
+                            //#codeqr(width="200" height="200")
+                            //input#inputSearch(type="text",placeholder="Buscar")
+                        br
+                        button.btn.btn-primary(type='button', onclick="showResume()",data-toggle='modal', data-target='#resumeModal') Resumen Pagos
+                        button.btn.btn-info(type='button', onclick="showUsers()",data-toggle='modal', data-target='#resume_usuarioModal') Resumen Usuarios
+                        .table-responsive
+                             table#lista_usuarios.table.table-bordered.dataTable()
+                                thead   
+                                    tr(role='row')
+                                    th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 20px;') Orden
+                                    th.sorting_asc(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-sort='ascending', aria-label='Name: activate to sort column descending', style='width: 152px;') Nombre
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Position: activate to sort column ascending', style='width: 138px;') Apellido
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Office: activate to sort column ascending', style='width: 80px;') Email
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Age: activate to sort column ascending', style='width: 49px;') DNI
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Start date: activate to sort column ascending', style='width: 66px;') Fecha registro
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 75px;') Deuda
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 75px;') Asistencia
+                                    th.sorting(tabindex='0', aria-controls='dataTable', rowspan='1', colspan='1', aria-label='Salary: activate to sort column ascending', style='width: 280px;') Actions
+                                    
+                                tbody
+                                //-
+                                    each user, i in users
+                                     
+                                        td #{i}
+                                        td #{user.name}
+                                        td #{user.lastname}
+                                        td #{user.email}
+                                        td #{user.dni}
+                                        td #{user.fecha}
+                                        td #{user.debt}
+                                        td #{user}

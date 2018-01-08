@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title ciis2017
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', href='css/style.css')
+  body(onload='myFunction()', style='margin:0;')
+    .document-style(style="    height: 100vh; background-color: #fff; margin: 2%; width: 620px; margin: auto; padding: 2%; font-family: 'Open Sans', sans-serif;")
+      .document-title(style='text-align: center; margin: auto;')
+        span Hola Sr(a): #{user.name} #{user.lastname}, ésta es tu confirmacion de registro al
+        h2(style='color: #0000FF;') #{user.title}
+      .line(style='  height: 2px; background-color: #797979; margin-bottom: 10px;')
+      .document-description(style='    margin-top: 35px; margin-bottom: 35px;')
+        p Su solicitud de Inscripcion ha sido enviada con éxito
+      span Resumen de Inscripcion:
+      .conteiner-assistant(style='display: flex; background-color: #dcdcdc; justify-content: space-around; padding: 2%;')
+        .assistant(style='text-align:center')
+          h3 ASISTENTE
+          .line
+            span #{user.name} #{user.lastname}
+            <div class="assistant">
+          
+      .text-conteiner
+        p.document-text
+          | El Congreso Internacional de Informática y Sistemas - Tacna se llevará a cabo el #{user.date}. "Tecnologías que rompen paradigmas en nuestro siglo"
+         //<span>Reglamento del Evento:Descargar<br></span>
+        span Si tienes consultas puedes comunicarte a: ciistacna@unjbg.edu.pe 
+      .conteiner-law(style='text-align: center; margin-top: 25px; background-color: #dcdcdc; padding: 2%;')
+        span.document-law
+          | Este correo ha sido enviado de manera automática por CIIS-TACNA
+          br
+        // <span class="document-law">Copyrugth (c) HUKODE APP.Todos los derechos reservados</span>

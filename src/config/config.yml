@@ -1,0 +1,37 @@
+---
+production: &default
+  serverPort: #{process.env.app_port}
+  baseUrl: http://cisstacna.com
+  views:
+    engine: .jade
+    extension: .jade
+    layout: main
+  html:
+    minify: true
+    css:
+      stylusPrecompile: true
+      compress: true
+  mailChimp:
+    apiKey: 'mailChimp-apikey'
+  dropbox:
+    key: 'dropbox-key'
+    secret: 'dropbox-secret'
+    token: 'dropbox-token'
+  app:
+    default: blog
+  languages:
+    default: en
+    list: [en, es]
+  email:
+    password: "###########"
+
+
+development:
+  <<: *default
+  serverPort: 3000
+  baseUrl: http://localhost:3333
+  html:
+    minify: false
+    css:
+      stylusPrecompile: false
+      compress: false
