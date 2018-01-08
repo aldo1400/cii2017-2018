@@ -1,0 +1,17 @@
+{
+  "name": "ciis 2018",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cloudnode@git.cloudno.de:/git/cherrynford/5149-1553c6d44ea3a37193a20bb18236c223.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
