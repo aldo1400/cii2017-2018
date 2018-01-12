@@ -27,7 +27,7 @@ block content
             li
               a(data-scroll='', href='#inversion') Inversión
             li
-              a(data-scroll='', href='#team') Ponentes
+              a(data-scroll='', href='#team') Cursos
             li
               a(data-scroll='', href='#talleres') Talleres              
             li
@@ -211,13 +211,10 @@ block content
                 section.scrollflow.-slide-bottom.-opacity.lazy.slider(data-sizes='50vw' style="width:83%; margin:auto;")
                   //- button.slick-pre.slick-arrow(aria-label="Previous" type="button" style="display: block;") Previous
                   div
-                    iframe.iframe-videos(src='https://www.youtube.com/embed/9RWYSZfTTM4', frameborder='0', allowfullscreen='')
+                    iframe(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1683844745041447%2F&width=800&show_text=false&height=376&appId', width='800', height='376', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true', allowfullscreen='true')
                   div
-                    iframe.iframe-videos(src='https://www.youtube.com/embed/0rsnbwxxQWY', frameborder='0', allowfullscreen='')
-
+                    iframe.iframe-videos(src='https://www.youtube.com/embed/-FEEYOyJ9_g', frameborder='0', allowfullscreen='')
                   //- div
-                  //-   iframe.iframe-videos(src='https://www.youtube.com/embed/0rsnbwxxQWY', frameborder='0', allowfullscreen='')
-
       section.section.tematicos#linea-investigacion
           h2.scrollflow.-pop.-opacity
             span.tematicos_title_frio EJES&nbsp
@@ -335,7 +332,7 @@ block content
           .row
             .col-lg-12.text-center.scrollflow.-slide-bottom.-opacity
               h2.section-heading CURSOS DE VERANO
-              h3.section-subheading.text-muted Conozca un poco más de nuestros cursos de verano,
+              h3.section-subheading.text-muted Conozca un poco más de nuestros cursos de verano
           .row
             section.responsive.slider
 
@@ -715,12 +712,39 @@ block content
             p Celulares: 988 899988 - 977 465783
             p E-mail: ciistacna@unjbg.edu.pe
       section.section#map
-          
-
       #modalb.modal-ponente
         .info-ponente
           .header-ponente
             #modalc.close-ponente
+              p X
+            .titulo-ponente
+              h1 Programación para dispositivos móviles: Android
+              p
+                | -48 Horas
+                br
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente()
+                img.img-1(src='img/cursos/android.png' width="80%" height="auto")
+          span.content-ponente(style="margin-top: -8px")
+            ul
+              li: h4 Temario
+              li: | - Entorno de desarrollo (Android Studio)
+              li: | - Estructura de un proyecto.
+              li: | - Componentes de una aplicación.
+              li: | - Desarrollando una aplicación sencilla
+              li: | - Diseño de Interfaz mediante XML y Código
+              li: | - Layouts
+              li: | - Controles básicos (I): Botones, Texto, Inputs, Imágenes.
+              li: | - Controles básicos (II): Checkbox, Radiobutton, ToggleButton, Seekbar
+              li: | - Controles de selección: Listas desplegables, Listas, Tablas, CardView
+              li: | - Material Design
+              li: | - Actionbar / Appbar / Toolbar: Actionbar básica
+              li: | - Animaciones básicas: CoordinatorLayout
+      #modalbb.modal-ponente
+        .info-ponente
+          .header-ponente
+            #modalcc.close-ponente
               p X
             .titulo-ponente
               h1 Taller de Arduino Deluxe
@@ -729,40 +753,24 @@ block content
                 br
                 | (24 horas academicas presenciales)
                 | (24 horas academicas virtuales)
-              .img-ponente(style="margin-top:-4em")
-                img.img-1(src='img/cursos/android.png' width="450" height="350")
-          span.content-ponente(style="margin-top:-9em")
+              .img-ponente
+                img.img-1(src='img/cursos/arduinodeluxe.jpg' width="80%" height="auto")
+          span.content-ponente
             ul
               li: h4 Temario
-              li: | - Electrónica básica
-              li: | - Introducción a ARDUINO.
-              li: | - Descripción de software.
-              li: | - Entradas y salidas digitales.
-              li: | - Temporizadores.
-              li: | - Sentencias IF, ELSE, ELSE IF.
-              li: | - Sentencias FOR, CASE.
-              li: | - Entradas y salidas análogas.
-              li: | - PWM.
-              li: | - Sensor de temperatura LM35.
-              li: | - Sensor de temperatura y humedad DHT11.
-              li: | - Pantallas LCD y gráficas con Arduino.
-              li: | - Proyectos varios con sensores y pulsadores
-      #modalbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalcc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
-                img.img-pais1(src='img/team/brasil.png')
-              .img-ponente
-                img.img-1(src='img/team/2.png')
-              h1 Dennis Barrios Aranibar
-              p
-                | -Doctor en ingeniería eléctrica y de computación, con énfasis en sistemas inteligentes por la Universidad Federal do Rio Grande do Norte, Brasil.
-          span.content-ponente
-            | Ha desarrollado diversos proyectos de innovación tecnológica para empresas e instituciones peruanas de diversos sectores como Chatsford S.A.C., El Bosque E.I.R.L., J. Ramón del Perú S.A.C. y Akson Perú S.R.L. Es docente tiempo completo e investigador en la universidad Católica San Pablo de Arequipa con proyectos de investigación teórica y aplicada en las áreas de robótica, automatización industrial e inteligencia artificial.
+              li: | -Electrónica básica
+              li: | -Introducción a ARDUINO.
+              li: | -Descripción de software.
+              li: | -Entradas y salidas digitales.
+              li: | -Temporizadores.
+              li: | -Sentencias IF, ELSE, ELSE IF.
+              li: | -Sentencias FOR, CASE.
+              li: | -Entradas y salidas análogas.
+              li: | -PWM.
+              li: | -Sensor de temperatura LM35.
+              li: | -Sensor de temperatura y humedad DHT11.
+              li: | -Pantallas LCD y gráficas con Arduino.
+              li: | -Proyectos varios con sensores y pulsadores
 
       #modalbbb.modal-ponente
         .info-ponente
@@ -770,69 +778,167 @@ block content
             #modalccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/chile.png')
-              .img-ponente
-                img.img-1(src='img/team/3.png')
-              h1 Sebastian Aracena Aguirre
+              h1  Autocad 2D-3D, e impresión 3D
               p
-                | -Magister en Ingeniería de Software e Ingeniero Civil de Computación e Informática en la Universidad de Tarapacá.
-
+                | -48 Horas
+                br
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/autocad.jpg' width="80%" height="auto")
           span.content-ponente
-            | Actualmente trabaja como analista y desarrollador con Metodologías ágiles utilizando herramientas como Trello, Gitlab, Dropbox, Slack, entre otros. Especializado en Sistemas de Información Geográfica (SIG), con conocimiento a base de datos espaciales con extensión POSTGIS y realice una investigación de herramientas de Inteligencia de Negocios con tecnología GIS para el tratamiento de datos del CENSO, conocimientos en tecnología de transporte como el GTFS y planificadores multimodales tecnología bastante utilizados en el área del transporte público. Posee 03 publicaciones: dos como coautor (Publicación Scielo) y una como autor (ISI).
+            ul
+              li: h4 Temario
+              li: | -Diseño 2D
+              li: | -Entidades de dibujo básicas, lineales y circulares
+              li: | -Edición de objetos
+              li: | -Referencias a objetos
+              li: | -Métodos de selección de entidades
+              li: | -Duplicación de objetos repetitivos: individual, estructurada, radial, matricial, reflejada y paralela
+              li: | -Control de las propiedades de los objetos. 
+              li: | -Organización de proyectos por capas.
+              li: | -Anotaciones, escritura y textos. Configurar estilos de texto
+              li: | -Datos asociados a elementos. Definir, insertar y editar bloques con atributos
+              li: | -Acotación - Colocación de cotas lineales, alineadas, angulares, radiales, secuenciales y asociadas
+              li: | -Cálculo de áreas
+              li: | -Introducción a 3D
+              li: | -Dibujos Isométricos 2D
+              li: | -Visualización tridimensional
+              li: | -Perspectiva paralela y perspectiva cónica
+              li: | -Transformación de objetos 2D en 3D. Elevación de paredes
+              li: | -Modificadores de 2D en 3D
+              li: | -Sólidos vs. Mallas
+              li: | -Sólidos primitivos: prisma, cuña, esfera, cilindro, cono, pirámide
+              li: | -Sólidos proyectados: extrusión, solevado, rotación
+              li: | -Sólidos de combinación. Operaciones Booleanas
+              li: | -Superficies
+              li: | -Modelado en 3D
+              li: | -Edición de sólidos y Herramientas de moldeado de superficies
+              li: | -Cortes y secciones
+              li: | -Impresión modelado 3D
+              li: | -Visualización fotorrealista: Render
+              li: | -Iluminación: sombras, iluminación solar, iluminación artificial.
+              li: | -Materiales: texturas, mapeados, acabados.
+
       #modalbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalcccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
-                img.img-pais1(src='img/team/eeuu.png')
-              .img-ponente
-                img.img-1(src='img/team/4.png')
-              h1 Anais Molina Rodriguez
+              h1  Diseño gráfico publicitario: Corel Draw - Photoshop
               p
-                | -Título de Especialidad en Contabilidad, Bachiller en ciencias en Lake Superior State University (LSSU).
+                | -48 Horas
                 br
-                | -Maestría en administración y dirección de empresas en la Universidad Peruana de las Américas.
-          span.content-ponente
-            | Certificada en bienes raíces con licencia en el estado de Massachusetts, analista de procesos de calidad y Google Analytics. Posee experiencia profesional en el área de negocios (marketing, contabilidad, administración) en empresas en Estados Unidos y Perú. Ha ocupado cargos gerenciales como directora de ventas y marketing en Estados Unidos y gerente general en empresas peruanas. Estudió en Lake Superior State University (LSSU), donde obtuvo su título profesional de bachiller en Ciencias con especialidad en administración y gestión de negocios y negocios internacionales.
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+            .img-ponente
+                img.img-1(src='img/cursos/coreldraw.jpg' width="80%" height="auto")
+            span.content-ponente
+              ul
+                li: h4  Temario
+                li: | -Introducción a CorelDRAW
+                li: | -Operaciones básicas
+                li: | -Crear objetos
+                li: | -Trabajar con objetos
+                li: | -Aplicar Rellenos
+                li: | -Aplicar color de borde, grosor y estilo
+                li: | -Organizar objetos
+                li: | -Soldar, Intersectar, Recortar
+                li: | -Transformar objetos
+                li: | -Dibujar libremente
+                li: | -Dibujar a partir de nodos
+                li: | -Efectos varios con imágenes
+                li: | -Trabajar con textos 
+                li: | -Ajuste del brillo el contraste y saturación
+                li: | -Recortar un mapa de bits
+                li: | -Efectos        
+                li: | -Impresión
+
       #modalbbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
-                img.img-pais1(src='img/team/brasil.png')
-                img.img-pais2(src='img/team/eeuu.png')
-              .img-ponente
-                img.img-1(src='img/team/5.png')
-              h1 Jorge Luis Poco Medina
+              h1  Edición de audio y video y Captura de imágenes aéreas con Drones DJI
               p
-                | -Doctorado en ciencias de la computación en New York University.
+                | -48 Horas
                 br
-                | -Maestría en Ciencias, programa ciencias de la computación y matemática computacional en la universidad de Sao Paulo, Brasil.
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/drones.jpg' width="80%" height="auto")
           span.content-ponente
-            | Jorge Poco es profesor asistente en el Centro de Investigación e Innovación en Informática (RICS) de la Universidad Católica de San Pablo (UCSP). Anteriormente, fue investigador asociado en el UW Interactive Data Lab (IDL) de la Universidad de Washington. Obtuvo su doctorado en la Escuela Politécnica de Ingeniería de NYU en 2015. Antes de ir a la Universidad de Nueva York (NYU), pasó un año en el Instituto de Computación Científica e Imaging (SCI) de la Universidad de Utah (UoU). Como parte de su vida profesional trabajó en zAgile Inc (2008), Google Inc (2008 y 2010), Kitware Inc (2011), Oak Ridge National Laboratory (2012) y Xerox Research (2013).Su investigación se ha centrado en la visualización de datos. Ha participado en proyectos de visualización de información, visualización científica y análisis visual.
+            ul
+              li: h4  Temario
+              li: |-Requisitos del sistema
+              li: |-Conocimiento de la interfaz de Sony Vegas Pro
+              li: |-Conversión de formatos con el programa Total Convert
+              li: |-Creación de un nuevo proyecto
+              li: |-Importar video y audio
+              li: |-Importar gráficos
+              li: |-Canales (audio y video)
+              li: |-Transiciones (Tipos de Transición (audio y video))
+              li: |-Texto
+              li: |-Funcionalidad de los botones de medios de proyecto
+              li: |-Creando contenedores (carpetas) para organizar archivos de proyecto
+              li: |-Ventana recortadora (uso de teclas de atajo)
+              li: |-Uso de marcadores
+              li: |-Corte y edición de videos
+              li: |-Uso de efectos
+              li: |-Opciones de zoom
+              li: |-Controles de reproducción
+              li: |-Edición de pistas (corte y edición)
+              li: |-Ajuste de tamaño
+              li: |-Crear, insertar, eliminar y duplicar pistas
+              li: |-Controles de pistas
+              li: |-Herramientas de edición
+              li: |-Transiciones
+              li: |-Eliminar y formas de encadenado de transición
+              li: |-Efectos (deshabilitar y eliminar)
+              li: |-Panoramización: uso de herramientas
+              li: |-Recorte de evento, uso de máscara
+              li: |-Aplicación de curvas y suavizado
+              li: |-Generadores de medios sólidos
+              li: |-Sólidos, configuración
+              li: |-Transparencia en sólidos y colores gradientes
+              li: |-Medios de texto, configuración
+              li: |-Movimientos de pistas en 2D
+              li: |-Movimientos de pistas en 3D
+              li: |-Audio, funciones de la pista de sonido
+              li: |-Audio, grabación en una pista de sonido
+              li: |-Renderización de proyectos.
+              li: |-Operación de drones
+              li: |-Captura de imágenes aéreas con drones
+              li: |-Edición y composición de imágenes capturada por drones.
+              li: |-Aplicaciones avanzadas con drones
       #modalbbbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalcccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')                
-              .img-ponente
-                img.img-1(src='img/team/6.png')
-              h1 Omar Martín Palomino Humaní
+              h1  Taller de Robótica con Legos Mindstorms NXT 2.0 y EV3
               p
-                | -Ingeniero de Sistemas.
+                | -48 Horas
                 br
-                | – Maestría terminada en Gestión de TI.
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/legosminds.jpg' width="80%" height="auto")
           span.content-ponente
+            ul
+              li: h4 Temario
+              li: | -Introducción a la robótica educativa
+              li: | -Conceptos generales
+              li: | -Robótica con LEGO Mindstorms NXT 2.0
+              li: | -Descripción del Software NXT G
+              li: | -Hub, motores y sensores
+              li: | -Secuencias de programación
+              li: | -Práctica de motores
+              li: | -Práctica de sensores
+              li: | -Actividad Final
             | Ingeniero de Sistemas con ocho años de experiencia en área de tecnologías de información, especializado en infraestructura tecnológica, gestión de servicios de TI y administración de Seguridad de Información. Experiencia en consultoría y administración de seguridad de información y Seguridad Informática, desarrollando tareas de implementación de sistemas de Gestión de Seguridad de Información (SGSI), Gestión de Riesgos de Infraestructura Tecnológicas (ISO 27005), evaluación de controles de Seguridad de Información (ISO27001 – ISO 27002) y realizando evaluaciones y análisis de seguridad de TI realizando servicios de Ethical Hacking. Además, es Instructor Oficial de la organización internacional MILE2 e instructor de Ethical Hacking en la Universidad Nacional de Ingeniería (UNI).      
       #modalbbbbbbb.modal-ponente
         .info-ponente
@@ -840,155 +946,130 @@ block content
             #modalccccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/chile.png')
-                img.img-pais1(src='img/team/españa.png')
-              .img-ponente
-                img.img-1(src='img/team/7.png')
-              h1 Marco Villalobos Abarca
+              h1  Manejo de software de oficina (Word, Excel, PowerPoint, Publisher)
               p
-                | -Doctor en Informática, Universidad Politécnica de Madrid-España.
+                | -48 Horas
+                br
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/office.png' width="80%" height="auto")
           span.content-ponente
-            | El Dr. Villalobos lleva más de 20 años dedicados a la docencia en el área curricular del Desarrollo de Sistemas Software, dictando cursos tales como Ingeniería de Software, Sistema de Información, Taller de Proyectos de Software, Taller de Ética y Responsabilidad del Informático, entre otros. Además, ha ejercido diversos cargos directivos tales como Jefatura de Carrera, Dirección de Departamento y Decanatura de Escuela Universitaria.
+            ul
+              li: h4 Temario
+              li: | Uso del procesador de texto Word
+                ul 
+                  li: |   - Manipular y usar los elementos de Word.
+                  li: |   - Manipular el área de trabajo de Word.
+                  li: |   - Vistas de documento.
+                  li: |   - Configurar página.
+                  li: |   - Guardar y abrir un documento
+                  li: |   - Digitación y corrección de texto.
+                  li: |   - Formatos.
+                  li: |   - Vista preliminar
+                  li: |   - Imprimir
+              li: | Uso de Hoja de Cálculo Excel  
+                ul 
+                  li: |   - Ingreso y manipulación de datos
+                  li: |   - Formato de filas y columnas
+                  li: |   - Manejo de hoja de cálculo
+                  li: |   - Cortar, copiar, pegar y pegado especial
+                  li: |   - Crear fórmulas y funciones a través de cálculos matemáticos
+                  li: |   - Tipos de referencia
+                  li: |   - Aplicar formatos para mejorar la presentación de los datos
+                  li: |   - Configurar página e imprimir
+              li: |  Uso de PowerPoint
+                ul
+                  li: |   - Elementos de la ventana PowerPoint 
+                  li: |   - uso de diseño de diapositivas  
+                  li: |   - Agregar/eliminar diapositiva  
+                  li: |   - Formateo de presentación  
+                  li: |   - Animacion y transicion   
       #modalbbbbbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalcccccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/bolivia.png')
-                img.img-pais1(src='img/team/argentina.png')
-              .img-ponente
-                img.img-1(src='img/team/8.png')
-              h1 Sergio Hernán Valenzuela Cámara
+              h1  Producción de recursos multimedia para educación: PREZI y EMAZE.
               p
-                | -Maestría en Ingeniería de software en la Universidad Nacional de la Plata, Argentina.
+                | -48 Horas
+                br
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/prezi.png' width="80%" height="auto")
           span.content-ponente
-            | Consultor en Informática y software developer en varias empresas privadas y públicas de Cochabamba, La Paz( Bolivia ) y Arica( Chile ).  Áreas de Interés: IoT(Internet of Things), Machine Learning, Software Engineering, E-Commerce, Web Applications y Software Development.
+            ul
+              li: h4 Temario
+              li: | - Primeros pasos con PREZI
+              li: | - La interfaz de PREZI
+              li: | - Organización y zoom
+              li: | - Rotación y alineación de elementos
+              li: | - Añadir objetos a mi colección
+              li: | - Agrupación de elementos
+              li: | - Añadir contenidos básicos
+              li: | - Inserción y animación de elementos
+              li: | - Crear una presentación de PREZI desde cero
+              li: | - Inicializando EMAZE
+              li: | - Inserción y animación de elementos
+              li: | - Crear una presentación avanzada con EMAZE
       #modalbbbbbbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalccccccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/brasil.png')
-                img.img-pais1(src='img/team/peru.png')
-              .img-ponente
-                img.img-1(src='img/team/9.png')
-              h1 Ernesto Cuadros Vargas
+              h1  Taller de Raspberry Pi 3
               p
-                | -Doctor en ciencias de la computación en el ICMC de la Universidad de Sao Paulo, Brasil.
+                | -48 Horas
+                br
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
+              .img-ponente
+                img.img-1(src='img/cursos/raspberry.jpg' width="80%" height="auto")
           span.content-ponente
-            | Recibió su Doctorado en Ciencia de la Computación en el ICMC de la Universidad de Sao Paulo (Brasil) en conjunto con Carnegie Mellon University (USA) con el Prof Christos Faloutsos en 2001 y el Technischen Universitat Berlin de Alemania con el Prof Dr. Klaus Obermayer en 2002 . Es fundador y miembro de la Sociedad de Computación Peruana y ha ocupado la presidencia en los periodos 2001-2007 y en 2009. El Prof. Cuadros-Vargas también ha Secretario Ejecutivo del Centro Latinoamericano de Informática (CLEI) (2008-2016) y Miembro del Educational Activities Board de IEEE (2006-2009), miembro de equipo de ACM/IEEE-CS Computing Curricula for Computer Science (CS2013) y del equipo de Computing Curricula (CC2020). Sus principales áreas de interés son la Educación Superior en Computación, Recuperación de Información por Similaridad, Métodos de Acceso y Redes Neuronales.
+            ul
+              li: h4 Temario
+              li: | - Tipos de Hardware Raspberry 
+              li: | - Selecion e instalanción de un sistema operativo
+              li: | - Instalando Linux Raspbian para ISO
+              li: | - Instalando Linux Raspbian para NOOBS
+              li: | - Configuraciones iniciales
+              li: | - Administracion de redes alámbricas e inhalámbricas (Wi-Fi)
+              li: | - Usando el terminal de linux
+              li: | - Conexiones remotas con SSH y VNC
+              li: | - API de Raspberry Pi
+              li: | - Accesorios de Raspberry Pi
+              li: | - Principales programas soportados
+              li: | - Comandos Básicos
+              li: | - Tranformando Rasberry Pi con un servidor Web
+              li: | - Instalando un LAMP Stack
+              li: | - Instalando un servidor MySQL
+              li: | - Instalando un servidor Apache2
+              li: | - Instalando y configurando un WorldPress
+              li: | - Usando Raspberry con Windows 10
+              li: | - Creando un Servidor FTP
       #modalbbbbbbbbbb.modal-ponente
         .info-ponente
           .header-ponente
             #modalcccccccccc.close-ponente
               p X
             .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
-                img.img-pais1(src='img/team/brasil.png')
-              .img-ponente
-                img.img-1(src='img/team/10.png')
-              h1 Américo Ariel Rubin de Celis Vidal
+              h1  Realidad virtual con UNITY utilizando cascos Samsung Gear VR y VR Box . 
               p
-                | -Doctorado en  Ingeniería Eléctrica con énfasis en Sistemas de Comunicaciones en la Pontificia Universidad Católica de Rio de Janeiro, Brasil.
-          span.content-ponente
-            | El año 2012 y 2017, recibió los grados académicos de Maestro (MSc.) y Doctor (Ph.D.), ambos en Ingeniería Eléctrica con énfasis en Sistemas de Comunicaciones por la Pontificia Universidad Católica de Rio de Janeiro (PUC-Rio)-Brasil. Entre los años 2006 a 2010 trabajó como profesor a tiempo parcial y completo en la Facultad de Ingeniería de la Universidad Privada de Tacna. Desde el año 2010 al 2017 se desempeñó como investigador en el Centro de Estudios en Telecomunicaciones (CETUC) de la Pontificia Universidad Católica de Rio de Janeiro. Actualmente labora como profesor a tiempo completo en la Universidad Nacional de Moquegua. Sus áreas de Investigación incluyen Sistemas de Comunicación por Satélite, Sistemas de Comunicaciones Digitales, Sistemas de Comunicaciones en VHF-UHF, y Procesamiento Digital de Señales.
-      #modalbbbbbbbbbbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalccccccccccc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
-              .img-ponente
-                img.img-1(src='img/team/11.png')
-              h1 Robert Cava
-              p
-                | -Empresario.
-          span.content-ponente
-            | Es fundador y presidente de Corp. Young of Today and Tomorrow S.A.C., GreenBerry Corporation S.A.C. y Cooperativa Pucallpa.
-      #modalbbbbbbbbbbbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalcccccccccccc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/venezuela.png')
-              .img-ponente
-                img.img-1(src='img/team/12.png')
-              h1 Magdalena de Luca
-              p
-                | -Ingeniero en Computación egresada de la Universidad Simón Bolívar.
+                | -48 Horas
                 br
-                | -Postgrado en Investigación de Operaciones en la Universidad Central de Venezuela.
-                br
-                | -Especialización en Gerencia y Mercadeo en el IESA.
-
-          span.content-ponente
-            | Ingeniero en Computación egresada de la Universidad Simón Bolívar con postgrado en Investigación de Operaciones en la Universidad Central de Venezuela y Especialización en Gerencia y Mercadeo en el IESA. Empresaria y conferencista internacional en el área de Integración Tecnológica, para la Región de Latinoamérica y el Caribe. Fundadora y Presidenta de Sybven, LLC holdings de empresas de Integración Tecnológica distribuidora de SAP-Sybase, KONY, Blackboard, DANA e IBM para Venezuela, México, Perú, Bolivia y el Caribe. Directora de DANA, empresa especializada en plataformas de campañas de mercadeo multicanal y CCM (manejo de comunicaciones automatizadas a clientes) para Venezuela, Mejico, Perú, Bolivia, el Caribe y Norte América Evangelizadora en temas de Integración Tecnológica Ecológica y tecnología aplicada a la educación. Ha establecido convenios con Universidades, Fundaciones y ONGs y emprendido proyectos de concientización en Venezuela y Latinoamérica.
-      #modalbbbbbbbbbbbbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalccccccccccccc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/peru.png')
+                | (24 horas academicas presenciales)
+                | (24 horas academicas virtuales)
               .img-ponente
-                img.img-1(src='img/team/13.png')
-              h1 Ricardo José Linares Juárez
-              p
-                | -Maestro en Ciencias: Informática, con Mención en Tecnologías de Información.                
-
+                img.img-1(src='img/cursos/virtualreality.jpg' width="80%" height="auto")
           span.content-ponente
-            | Entre los años 2014 y 2016 trabajó en el proyecto de investigación científica de "Laboratorios Virtuales" para la Universidad Nacional de San Agustín de Arequipa. Ganador de Beca Concytec. Ha presentado sus trabajos de investigación científica en el campo de la Realidad Virtual en los países de Ecuador, Argentina y Cuba. Actualmente es Jefe de Proyecto de la nueva versión del Sistema Nacional SIRTOD en el Instituto Nacional de Estadística e Informática. Programador certificado internacionalmente por ORACLE. Sus áreas de Investigación son:
-            br
-            |- Realidad Virtual.
-            br
-            |- Inteligencia Artificial.
-            br
-            |- Procesamiento de Lenguaje Natural.
-            br
-            |- Interacción Humano Computador.
-
-      #modalbbbbbbbbbbbbbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalcccccccccccccc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/eeuu.png')
-                img.img-pais1(src='img/team/chile.png')                
-              .img-ponente
-                img.img-1(src='img/team/14.png')
-              h1 Claudio Meneses Villegas
-              p
-                | -Doctor en Ciencias en University of Massachusetts, USA.                
-
-          span.content-ponente
-            | Claudio Meneses obtuvo su Ph.D. y MSc. desde la University of Massachusetts, USA, en 2002 y 1997 respectivamente. Actualmente se desempeña como Director del Departamento de Ingeniería de Sistemas y Computación de la U. Católica del Norte, Antofagasta, Chile. Ha sido miembro del directorio de la Sociedad Chilena de Ciencias de la Computación, y es el actual presidente del consorcio Infonor Chile. Sus intereses de investigación incluyen Machine Learning, Data Mining, Information Visualization.
-      #modalbbbbbbbbbbbbbbb.modal-ponente
-        .info-ponente
-          .header-ponente
-            #modalccccccccccccccc.close-ponente
-              p X
-            .titulo-ponente
-              .img-paises
-                img.img-pais(src='img/team/eeuu.png')                
-              .img-ponente
-                img.img-1(src='img/team/15.jpg')
-              h1 Justin Kihyun Sheen
-              p
-                | -Bachiller en ciencias con Mención en Biología Computacional.
-
-          span.content-ponente
-            | En la actualidad trabaja como investigador en el Centro de Epidemiología Clínica y Bioestadística de la Facultad de Medicina Perelman en la Universidad de Pennsylvania sobre el vector de la enfermedad de Chagas. Fue asistente de investigación en el Departamento de Neurología del Hospital de Niños de Pennsylvania. Entre sus reconocimientos cabe destacar que ganó la Subvención de investigación y viajes otorgado por Pincus-Magaziner Famil, donde viajó a Perú para trabajar en un proyecto de investigación sobre la diseminación de la enfermedad de Chagas en el 2017.            
-                        
+            ul
+              li: h4 Temario
+              li: | - Iniciar en Unity y explorar los recursos del desarrollador.
+              li: | - Su escena de la primera habitación Escala VR
+              li: | - Construye y ejecuta una escena simple para Oculus Samsung Gear VR
+              li: | - Interacción Visual
+              li: | - Comenzando tu primer juego VR
+              li: | - Interactuando con objetos usando los controladores de movimiento
