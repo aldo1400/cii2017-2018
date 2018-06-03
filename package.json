@@ -30,6 +30,9 @@
     "reniec-sunat-js": "^1.0.0",
     "serve-favicon": "~2.4.2"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "nodemon": "^1.11.0",
     "bower": "^1.7.9",
