@@ -11,9 +11,9 @@ block content
           #logo
             //-a.ciis-logo-link(href='/')            
             //- img.nav-logo(src='img/logo.png', alt='')
-            img.nav-logo(src='img/logoo.png', alt='')
-            p.items.header-subtitle.nav-items CONGRESO INTERNACIONAL                            
-            p.items.header-subtitle2.nav-items DE INFORMÁTICA Y SISTEMAS
+            img.nav-logo(src='img/logo final2018.png', alt='')
+            p.items.header-subtitle.nav-items CONGRESO INTERNACIONAL DE                          
+            p.items.header-subtitle2.nav-items INFORMÁTICA Y SISTEMAS
           // <div id="logo">Your Logo here</div>
           label.toggle(for='drop') Menú
           input#drop(type='checkbox')
@@ -25,11 +25,11 @@ block content
             li
               a(data-scroll='', href='#inversion') Inversión
             li
-              a(data-scroll='', href='#team') Cursos
+              a(data-scroll='', href='#team') Ponentes
             li
               a(data-scroll='', href='#talleres') Talleres              
             li
-              a(data-scroll='', href='#cronograma') Cronograma
+              a(data-scroll='', href='#cronograma') Feria tecnológica
             li
               a#contactBtn(href='#animatedModal') Contacto
             //-li
@@ -48,30 +48,30 @@ block content
 
         #htmlcaption1.nivo-html-caption
           section#index.section.section-page
-            //- article#countdown
-            //-   .container_countdown_unit
-            //-     span#days.countdown_unit
-            //-     span.countdown_unit_label  Días
-            //-   span.separator
-            //-   .container_countdown_unit
-            //-     span#hours.countdown_unit
-            //-     span.countdown_unit_label  Horas
-            //-   span.separator
-            //-   .container_countdown_unit
-            //-     span#minutes.countdown_unit
-            //-     span.countdown_unit_label  Minutos
-            //-   span.separator
-            //-   .container_countdown_unit
-            //-     span#seconds.countdown_unit
-            //-     span.countdown_unit_label  Segundos
-            h1
+            article#countdown
+              .container_countdown_unit
+                span#days.countdown_unit
+                span.countdown_unit_label  Días
+              span.separator
+              .container_countdown_unit
+                span#hours.countdown_unit
+                span.countdown_unit_label  Horas
+              span.separator
+              .container_countdown_unit
+                span#minutes.countdown_unit
+                span.countdown_unit_label  Minutos
+              span.separator
+              .container_countdown_unit
+                span#seconds.countdown_unit
+                span.countdown_unit_label  Segundos
+            h1 
               span.highlighted
-                | CONGRESO
+                | XIX CONGRESO
                 small.highlighted2  INTERNACIONAL
               span
                 | DE
                 small.highlighted3  INFORMÁTICA Y SISTEMAS
-              span.subtitle Emprendimiento e innovación tecnológica
+              span.subtitle Gestión del conocimiento e innovación tecnológica
               //-span.subtitle2 el mejor evento tecnológico del sur del Perú
             .subscription
               //-input#email(type='email', placeholder='Tu email')
@@ -130,8 +130,8 @@ block content
                 .campo-pre
                   p Tipo de Inscripción
                   select#preRegisterType.form-control(name='type')
-                    each type in types
-                      option(value=type._id) #{type.name}
+                    //- each type in types
+                    //-   option(value=type._id) #{type.name}
                 .campo-pre
                   p Ciudad
                   input#preRegisterCity(type='text',name='city', required='')
@@ -150,61 +150,62 @@ block content
 
 
 
-      //- section.section.tematicos#linea-investigacion2
-      //-   ul
-      //-     li.scrollflow.-slide-bottom.-opacity
-      //-       div
-      //-         img(src='img/uno.png', alt='icono de uno')
-      //-       h4
-      //-         span.tematicos_semititle(style="color:white;font-weight: 900;")
-      //-           | Fecha
+      section.section.tematicos#linea-investigacion2
+        ul
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/uno.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Fecha
 
-      //-       span.tematicos_contenido(style="color:white")
-      //-         | Del 13 al 17 de Noviembre
-      //-     li.scrollflow.-slide-bottom.-opacity
-      //-       div
-      //-         img(src='img/dos.png', alt='icono de uno')
-      //-       h4
-      //-         span.tematicos_semititle(style="color:white;font-weight: 900;")
-      //-           | Hora de Inicio
+            span.tematicos_contenido(style="color:white")
+              | Del 12 al 16 de Noviembre
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/dos.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Hora de Inicio
 
-      //-       span.tematicos_contenido(style="color:white")
-      //-         | 8:30 am
+            span.tematicos_contenido(style="color:white")
+              | 8:30 am
 
-      //-     li.scrollflow.-slide-bottom.-opacity
-      //-       div
-      //-         img(src='img/tres.png', alt='icono de uno')
-      //-       h4
-      //-         span.tematicos_semititle(style="color:white;font-weight: 900;")
-      //-           | Lugar
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/tres.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Lugar
 
-      //-       span.tematicos_contenido(style="color:white")
-      //-         | Auditorio Central de la UNJBG
-      //-         br
-      //-         | Auditorio de Contabilidad de la UNJBG
+            span.tematicos_contenido(style="color:white")
+              | Auditorio Central de la UNJBG
+              br
+              | Auditorio de Contabilidad de la UNJBG
 
-      //-     li.scrollflow.-slide-bottom.-opacity
-      //-       div
-      //-         img(src='img/cuatro.png', alt='icono de uno')
-      //-       h4
-      //-         span.tematicos_semititle(style="color:white;font-weight: 900;")
-      //-           | 17 Expositores
+          li.scrollflow.-slide-bottom.-opacity
+            div
+              img(src='img/cuatro.png', alt='icono de uno')
+            h4
+              span.tematicos_semititle(style="color:white;font-weight: 900;")
+                | Expositores
 
-      //-       span.tematicos_contenido(style="color:white")
-      //-         | Expertos
+            span.tematicos_contenido(style="color:white;")
+              | Expertos Nacionales e Internacionales
 
       section.section#videos-presentacion
               .container-videos
                 h2.videos-titles.scrollflow.-pop.-opacity
-                  span.videos-title1 INVITACIÓN PARA LOS&nbsp
-                  span.videos-title2 CURSOS DE VERANO
-                section.scrollflow.-slide-bottom.-opacity.lazy.slider(data-sizes='50vw' style="width:83%; margin:auto;")
+                  span.videos-title1 PRESENTACIÓN DEL 
+                  span.videos-title2 XIX CIIS
+                section
                   //- button.slick-pre.slick-arrow(aria-label="Previous" type="button" style="display: block;") Previous
-                  //  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                  //- //  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
                   div
-                    iframe.iframe-videos(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F", frameborder='0', allowfullscreen='')
-
-                  //- div
+                   
+                    iframe.iframe-videos(width='560', height='315', src='https://www.youtube.com/embed/aS5bgHWPZdM?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                    //- iframe.iframe-videos(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560&hd=true', frameborder='0', allowfullscreen='')
+                  div
       section.section.tematicos#linea-investigacion
           h2.scrollflow.-pop.-opacity
             span.tematicos_title_frio EJES&nbsp 
@@ -295,13 +296,13 @@ block content
           h2
             span.inversion_title_caliente.scrollflow.-pop.-opacity(style="") INVERSIÓN
           .estu-prof.estudiantes.scrollflow.-slide-bottom.-opacity              
-              h3 DEL 06 de noviembre al 13 de noviembre
+              h3 Promocion Junio - Julio
               div
                 h4
                   | ESTUDIANTE                  
                 p.precio
                   span.sueldo S/.
-                  | 100
+                  | 60
                 hr
                 a#registrate1(href='#preRegisterModal') Preinscríbete
 
@@ -310,98 +311,99 @@ block content
                   | PROFESIONAL Y PÚBLICO EN GENERAL                  
                 p.precio
                   span.sueldo S/.
-                  | 140
+                  | 100
                 hr
                 a#registrate3(href='#preRegisterModal') Preinscríbete          
 
-        h3.scrollflow.-pop.-opacity Nro Cta BCP: 540-38259813-0-99 (Yovana Velasquez)
-        h4.scrollflow.-pop.-opacity  Los depósitos hechos fuera de Tacna, deben adicionar S/. 7.50 de comisión
+        //- h3.scrollflow.-pop.-opacity Nro Cta BCP: 540-38259813-0-99 (Yovana Velasquez)
+        //- h3.scrollflow.-pop.-opacity Nro Cta BCP: 540-38259813-0-99 (Yovana Velasquez)
+        //- h4.scrollflow.-pop.-opacity  Los depósitos hechos fuera de Tacna, deben adicionar S/. 7.50 de comisión
 
       section.section#team.bg-light-gray
         .container
           .row
             .col-lg-12.text-center.scrollflow.-slide-bottom.-opacity
-              h2.section-heading CURSOS DE VERANO
-              h3.section-subheading.text-muted Conozca un poco más de nuestros cursos de verano
+              h2.section-heading Ponentes
+              h3.section-subheading.text-muted Conozca un poco más de nuestros ponentes
           .row
             section.responsive.slider
 
               div.col-sm-4
                 .team-member
                   .producto.prod-first
-                    img(src='img/cursos/android.png')
+                    img(src='img/silueta.png')
                     .mask
-                      h2 Taller de Android
-                      button#modala.infoModal +
+                      h2 Ponente 1
+                      //- button#modala.infoModal +
               div.col-sm-4
                 .team-member
                   .producto.prod-first
-                    img(src='img/cursos/arduinodeluxe.jpg')
+                    img(src='img/silueta.png')
                     .mask
-                      h2 Taller de Arduino Deluxe
-                      button#modalaa.infoModal +
+                      h2 Ponente 2
+                      //- button#modalaa.infoModal +
               div.col-sm-4
                 .team-member
                   .producto.prod-first
-                    img(src='img/cursos/autocad.jpg')
+                    img(src='img/silueta.png')
                     .mask
-                      h2 Autocad 2D-3D, e impresión 3D
-                      button#modalaaa.infoModal +
+                      h2 Ponente 3
+                      //- button#modalaaa.infoModal +
               div.col-sm-4
                 .team-member
                   .producto.prod-first
-                    img(src='img/cursos/coreldraw.jpg')
+                    img(src='img/silueta.png')
                     .mask
-                      h2 Diseño gráfico publicitario: Corel Draw - Photoshop
-                      button#modalaaaa.infoModal +
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/drones.jpg')
-                    .mask
-                      h2 Edición de audio y video y Captura de imágenes aéreas con Drones DJI
-                      button#modalaaaaa.infoModal +
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/legosminds.jpg')
-                    .mask
-                      h2 Taller de Robótica con Legos Mindstorms NXT 2.0 y EV3
-                      button#modalaaaaaa.infoModal +                      
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/office.png')
-                    .mask
-                      h2 Manejo de software de oficina (Word, Excel, PowerPoint, Publisher)
-                      button#modalaaaaaaa.infoModal +
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/prezi.png')
-                    .mask
-                      h2  Producción de recursos multimedia para educación: PREZI y EMAZE
-                      button#modalaaaaaaaa.infoModal +
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/raspberry.jpg')
-                    .mask
-                      h2 Taller de Raspberry Pi 3
-                      button#modalaaaaaaaaa.infoModal +
-              div.col-sm-4
-                .team-member
-                  .producto.prod-first
-                    img(src='img/cursos/virtualreality.jpg')
-                    .mask
-                      h2 Realidad virtual con UNITY utilizando cascos Samsung Gear VR y VR Box
-                      button#modalaaaaaaaaaa.infoModal +
+                      h2 Ponente 4
+                      //- button#modalaaaa.infoModal +
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/drones.jpg')
+              //-       .mask
+              //-         h2 Edición de audio y video y Captura de imágenes aéreas con Drones DJI
+              //-         button#modalaaaaa.infoModal +
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/legosminds.jpg')
+              //-       .mask
+              //-         h2 Taller de Robótica con Legos Mindstorms NXT 2.0 y EV3
+              //-         button#modalaaaaaa.infoModal +                      
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/office.png')
+              //-       .mask
+              //-         h2 Manejo de software de oficina (Word, Excel, PowerPoint, Publisher)
+              //-         button#modalaaaaaaa.infoModal +
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/prezi.png')
+              //-       .mask
+              //-         h2  Producción de recursos multimedia para educación: PREZI y EMAZE
+              //-         button#modalaaaaaaaa.infoModal +
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/raspberry.jpg')
+              //-       .mask
+              //-         h2 Taller de Raspberry Pi 3
+              //-         button#modalaaaaaaaaa.infoModal +
+              //- div.col-sm-4
+              //-   .team-member
+              //-     .producto.prod-first
+              //-       img(src='img/cursos/virtualreality.jpg')
+              //-       .mask
+              //-         h2 Realidad virtual con UNITY utilizando cascos Samsung Gear VR y VR Box
+              //-         button#modalaaaaaaaaaa.infoModal +
 
       section.section#talleres
         .container-talleres
           h2.talleres-titles.scrollflow.-pop.-opacity
-            span.taller-title1 PRECIOS&nbsp
-            span.taller-title2 TALLERES            
+            //- span.taller-title1 PRECIOS&nbsp
+            span.taller-title2 TALLERES(POR CONFIRMAR)            
         .row
           section.responsive.slider
 
@@ -409,173 +411,173 @@ block content
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Complex Networks
+                      | Taller 1
                   .transition-taller                    
                     img.imgTaller(src='img/taller/Complex Networks.png')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.30.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.50.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.30.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.50.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   1 sesión
                         br
-                      .taller-suscripcion1
-                        button#opentaller1.opentaller(href='#bgtaller') INSCRÍBETE 
+                      //- .taller-suscripcion1
+                      //-   button#opentaller1.opentaller(href='#bgtaller') INSCRÍBETE 
+            //- div#btn-taller
+            //-   .container-taller
+            //-     .opt-taller
+            //-       h4.taller-title
+            //-           | Capture the flag (CTF): técnicas de Ethical hacking en entornos reales
+            //-       .transition-taller                    
+            //-         img.imgTaller(src='img/taller/CTF.png')
+            //-         .taller-suscripcion
+            //-           .taller-precio                        
+            //-             //- strong s/.20.00(Con Inscripción al CIIS)
+            //-             //- br
+            //-             //- strong s/.30.00(Sin Inscripción al CIIS)
+            //-             //- br
+            //-             |                   1 sesión
+            //-             br
+            //-           //- .taller-suscripcion1
+            //-           //-   button#opentaller2.opentaller(href='#bgtaller') INSCRÍBETE                        
             div#btn-taller
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Capture the flag (CTF): técnicas de Ethical hacking en entornos reales
-                  .transition-taller                    
-                    img.imgTaller(src='img/taller/CTF.png')
-                    .taller-suscripcion
-                      .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
-                        |                   1 sesión
-                        br
-                      .taller-suscripcion1
-                        button#opentaller2.opentaller(href='#bgtaller') INSCRÍBETE                        
-            div#btn-taller
-              .container-taller
-                .opt-taller
-                  h4.taller-title
-                      | Artificial neural networks
+                      | Taller 2
                   .transition-taller                    
                     img.imgTaller(src='img/taller/Artificial_networks.png')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.30.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.50.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.30.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.50.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   1 sesión
                         br
-                      .taller-suscripcion1
-                        button#opentaller3.opentaller(href='#bgtaller') INSCRÍBETE   
+                      //- .taller-suscripcion1
+                      //-   button#opentaller3.opentaller(href='#bgtaller') INSCRÍBETE   
+            //- div#btn-taller
+            //-   .container-taller
+            //-     .opt-taller
+            //-       h4.taller-title
+            //-           | Taller de desarrollo de videojuego con GameMaker
+            //-       .transition-taller                    
+            //-         img.imgTaller(src='img/taller/juegos.png')
+            //-         .taller-suscripcion
+            //-           .taller-precio                        
+            //-             //- strong s/.20.00(Con Inscripción al CIIS)
+            //-             //- br
+            //-             //- strong s/.30.00(Sin Inscripción al CIIS)
+            //-             //- br
+            //-             |                   1 sesión
+            //-             br
+            //-           //- .taller-suscripcion1
+            //-           //-   button#opentaller4.opentaller(href='#bgtaller') INSCRÍBETE                                                                                        
             div#btn-taller
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Taller de desarrollo de videojuego con GameMaker
-                  .transition-taller                    
-                    img.imgTaller(src='img/taller/juegos.png')
-                    .taller-suscripcion
-                      .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
-                        |                   1 sesión
-                        br
-                      .taller-suscripcion1
-                        button#opentaller4.opentaller(href='#bgtaller') INSCRÍBETE                                                                                        
-            div#btn-taller
-              .container-taller
-                .opt-taller
-                  h4.taller-title
-                      | Taller Introductorio de Raspberry Pi 3B
+                      | Taller 3
                   .transition-taller                    
                     img.imgTaller(src='img/taller/raspberry.jpg')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.30.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.40.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.30.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.40.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   2 sesiones
                         br
-                      .taller-suscripcion1
-                        button#opentaller5.opentaller(href='#bgtaller') INSCRÍBETE                                             
+                      //- .taller-suscripcion1
+                      //-   button#opentaller5.opentaller(href='#bgtaller') INSCRÍBETE                                             
             div#btn-taller
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Taller avanzado de Raspberry Pi-Ensamblado de Robot Pibot
+                      | Taller 4
                   .transition-taller                    
                     img.imgTaller(src='img/taller/rapberry2.jpg')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.30.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.40.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.30.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.40.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   2 sesiones
                         br
-                      .taller-suscripcion1
-                        button#opentaller6.opentaller(href='#bgtaller') INSCRÍBETE                         
+                      //- .taller-suscripcion1
+                      //-   button#opentaller6.opentaller(href='#bgtaller') INSCRÍBETE                         
             div#btn-taller
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Taller de drones
+                      | Taller 5
                   .transition-taller                    
                     img.imgTaller(src='img/taller/drones.png')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.20.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.30.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   1 sesión
                         br
-                      .taller-suscripcion1
-                        button#opentaller7.opentaller(href='#bgtaller') INSCRÍBETE                        
+                      //- .taller-suscripcion1
+                      //-   button#opentaller7.opentaller(href='#bgtaller') INSCRÍBETE                        
             div#btn-taller
               .container-taller
                 .opt-taller
                   h4.taller-title
-                      | Realidad virtual
+                      | Taller 6
                   .transition-taller                    
                     img.imgTaller(src='img/taller/realidad_virtual.jpg')
                     .taller-suscripcion
                       .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
+                        //- strong s/.20.00(Con Inscripción al CIIS)
+                        //- br
+                        //- strong s/.30.00(Sin Inscripción al CIIS)
+                        //- br
                         |                   1 sesión
                         br
-                      .taller-suscripcion1                        
-                        button#opentaller8.opentaller(href='#bgtaller') INSCRÍBETE
-            div#btn-taller
-              .container-taller
-                .opt-taller
-                  h4.taller-title
-                      | SAP FI/CO CONSULTOR
-                  .transition-taller                    
-                    img.imgTaller(src='img/taller/sap.jpg')
-                    .taller-suscripcion
-                      .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
-                        |                   1 sesión
-                        br
-                      .taller-suscripcion1
-                        button#opentaller9.opentaller(href='#bgtaller') INSCRÍBETE         
+                      //- .taller-suscripcion1                        
+                      //-   button#opentaller8.opentaller(href='#bgtaller') INSCRÍBETE
+            //- div#btn-taller
+            //-   .container-taller
+            //-     .opt-taller
+            //-       h4.taller-title
+            //-           | SAP FI/CO CONSULTOR
+            //-       .transition-taller                    
+            //-         img.imgTaller(src='img/taller/sap.jpg')
+            //-         .taller-suscripcion
+            //-           .taller-precio                        
+            //-             //- strong s/.20.00(Con Inscripción al CIIS)
+            //-             //- br
+            //-             //- strong s/.30.00(Sin Inscripción al CIIS)
+            //-             //- br
+            //-             |                   1 sesión
+            //-             br
+            //-           //- .taller-suscripcion1
+            //-           //-   button#opentaller9.opentaller(href='#bgtaller') INSCRÍBETE         
 
-            div#btn-taller
-              .container-taller
-                .opt-taller
-                  h4.taller-title
-                      | Taller Diseño e Impresión en 3D
-                  .transition-taller                    
-                    img.imgTaller(src='img/taller/impresion_3d.jpg')
-                    .taller-suscripcion
-                      .taller-precio                        
-                        strong s/.20.00(Con Inscripción al CIIS)
-                        br
-                        strong s/.30.00(Sin Inscripción al CIIS)
-                        br
-                        |                   1 sesión
-                        br
-                      .taller-suscripcion1
-                        button#opentaller10.opentaller(href='#bgtaller') INSCRÍBETE                                      
+            //- div#btn-taller
+            //-   .container-taller
+            //-     .opt-taller
+            //-       h4.taller-title
+            //-           | Taller Diseño e Impresión en 3D
+            //-       .transition-taller                    
+            //-         img.imgTaller(src='img/taller/impresion_3d.jpg')
+            //-         .taller-suscripcion
+            //-           .taller-precio                        
+            //-             //- strong s/.20.00(Con Inscripción al CIIS)
+            //-             //- br
+            //-             //- strong s/.30.00(Sin Inscripción al CIIS)
+            //-             //- br
+            //-             |                   1 sesión
+            //-             br
+            //-           .taller-suscripcion1
+            //-             button#opentaller10.opentaller(href='#bgtaller') INSCRÍBETE                                      
                    
 
 
@@ -634,22 +636,33 @@ block content
               input#submitPreRegisterTaller(type='button', value='Enviar')  
 
       section.section#cronograma
+                    
                     .container-cronograma
                       h2.cronograma-titles.scrollflow.-pop.-opacity
-                        span.videos-title1 CRONOGRAMA&nbsp
-                        span.videos-title2 XVIII CIIS 2017
-                      .ScrollImg
-                        img.Cronograma(src='img/cronograma/Cronograma.png')
-                      h4.cronograma-titles.scrollflow.-pop.-opacity
-                        span.videos-title1 CRONOGRAMA TALLER
-                        span.videos-title2  LABORATORIO 01
-                      .ScrollImg
-                        img.Cronograma(src='img/cronograma/Laboratorio_A.png')
-                      h4.cronograma-titles.scrollflow.-pop.-opacity
-                        span.videos-title1 CRONOGRAMA TALLER
-                        span.videos-title2  LABORATORIO 02
-                      .ScrollImg
-                        img.Cronograma(src='img/cronograma/Laboratorio_Ciencias.png')
+                        span.videos-title1 FERIA TECNOLOGICA
+                        span.videos-title2 CIIS 2018
+                        h4.cronograma-titles.scrollflow.-pop.-opacity
+                          span.videos-title1 Mas información pronto
+                          span.videos-title2 
+                        //-   span Es un actviidad
+                        //- h4.cronograma-titles.scrollflow.-pop.-opacity
+                        //-   span.videos-title1 UBICACION
+                        //-   span.videos-title2  LABORATORIO 01
+                        //- h4.cronograma-titles.scrollflow.-pop.-opacity
+                        //-   span.videos-title1 UBICACION
+                        //-   span.videos-title2  LABORATORIO 01
+                      //- .ScrollImg
+                      //-   img.Cronograma(src='img/cronograma/Cronograma.png')
+                      //- h4.cronograma-titles.scrollflow.-pop.-opacity
+                      //-   span.videos-title1 CRONOGRAMA TALLER
+                      //-   span.videos-title2  LABORATORIO 01
+                      //- .ScrollImg
+                      //-   img.Cronograma(src='img/cronograma/Laboratorio_A.png')
+                      //- h4.cronograma-titles.scrollflow.-pop.-opacity
+                      //-   span.videos-title1 CRONOGRAMA TALLER
+                      //-   span.videos-title2  LABORATORIO 02
+                      //- .ScrollImg
+                      //-   img.Cronograma(src='img/cronograma/Laboratorio_Ciencias.png')
 
 
       section.section.auspicios

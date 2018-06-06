@@ -117,10 +117,10 @@ small.highlighted3{font-family:'Open Sans';font-weight:700;font-size:0.99em;colo
 #index .subscription{padding:0 1.5em;}
 #index .subscription input,
 #index .subscription button{width:90% !important;display:block;max-width:100%;margin:auto;}
-header section .nav-logo{width:50px !important;height:50px !important;margin-top:!important;}
+header section .nav-logo{width:50px !important;height:50px !important;margin-top:important;}
 header section .header-title-number{margin-top:15px !important;}
 header section h2{padding-left:5px !important;}
-header nav ul{}
+/* header nav ul{} */
 header nav .separator{margin:13px 8px !important;margin-right:5px !important;}
 }
 @media (max-width:480px){body{font-size:13px;}
@@ -281,7 +281,7 @@ nav ul{float:none;}
 @media all and (min-width:1250px){#countdown{margin-left:-85px;}
 #index h1 span.highlighted{margin-left:58px;}
 #index h1 span{margin-left:74px;}
-#index h1 span.subtitle{text-align:center;margin-left:-87px;font-size:17px;}
+#index h1 span.subtitle{text-align:center;margin-left:-5px;font-size:17px;}
 #index h1 span.subtitle2{width:307px;text-align:center;margin-left:31.4%;}
 #index button{margin-left:-272px;}
 #countdown{margin-top:5%;}
@@ -301,18 +301,18 @@ nav a{margin:0 0px;}
 li.hidden-sm.hidden-md.hidden-xss{margin-top:8px;}
 @media all and (min-width:750px){nav a{margin:0 8px;margin-top:-2px;}
 #logo{padding:21px 5px;}
-.header-subtitle2{margin-top:32px;margin:auto;font-size:22px;width:425px;padding-left:72px;padding-top:5px;}
-.header-subtitle{margin-top:32px;margin:auto;font-size:22px;width:414px;padding-left:71px;padding-top:0px;padding-bottom:0px;}
+.header-subtitle2{margin-top:32px;margin:auto;font-size:18px;width:425px;padding-left:100px;padding-top:5px;}
+.header-subtitle{margin-top:32px;margin:auto;font-size:18px;width:414px;padding-left:71px;padding-top:10px;padding-bottom:0px;}
 .header-title-number{font-size:1em;margin-bottom:-14px;}
 .header-title-text{font-size:1.8em;}
-.nav-logo{width:354px;height:107px;margin-left:50px;margin-top:5px;}
+.nav-logo{width:344px;height:97px;margin-left:50px;margin-top:5px;}
 }
 #schedule{padding:30px;background-color:#263C49;height:777%;}
 @media all and (max-width:430px){#schedule{padding:10px;height:500%;}
 }
-#auspiciadores{background:white;padding-bottom::4em;padding-top:2em;height:500px;}
-.subtitle-section,#auspiciadores,#Organizadores h2{}
-#auspiciadores img{}
+#auspiciadores{background:white;padding-bottom:4em;padding-top:2em;height:500px;}
+/* .subtitle-section,#auspiciadores,#Organizadores h2{}
+#auspiciadores img{} */
 td span{display:block;}
 .bold{font-weight:bold;}
 .baseProg, .baseProg:visited{margin-top:2em;color:#00aad4;}
