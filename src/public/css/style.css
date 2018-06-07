@@ -354,7 +354,7 @@ img.img-responsive2, img.img-responsive3, img.img-responsive4{width:145px;height
 .contenedor .estu-prof > div:nth-child(2){margin-left:0px;}
 .estu-prof .primera{display:inline-block;vertical-align:middle;}
 .estu-prof div{width:350px;display:inline-block;box-shadow:rgba(0, 0, 0, 0.2) 0px 2px 15px 0px;vertical-align:middle;margin-left:3.5%;background-color:rgb(255, 255, 255);border-radius:7px;margin-top:33px;}
-.estu-prof div .precio{font-size:40pt;margin-bottom:1px;margin-top:20px;padding:0px;color:#474747;font-weight:900;}
+.estu-prof div .precio{font-size:18pt;margin-bottom:1px;margin-top:20px;padding:0px;color:#474747;font-weight:900;}
 .estu-prof div p{color:rgb(71, 71, 71);font-weight:bold;font-size:13pt;}
 .estu-prof div p{color:rgb(255, 255, 255);font-weight:bold;font-size:13pt;}
 .estu-prof div hr{width:67%;display:inline-block;background-color:#414141;height:2px;}

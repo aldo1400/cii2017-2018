@@ -103,7 +103,7 @@ a{margin:0;padding:0;text-decoration:none;}
 .container h2{}
 @media all and (min-width:990px){.tematicos{height:955px;}
 }
-@media all and (min-width:1232px){.tematicos{height:655px;}
+@media all and (min-width:1232px){.tematicos{height:955px;}
 }
 section#linea-investigacion2{height:295px;background-color:#060505;}
 @media all and (max-width:625px){section#linea-investigacion2{height:990px;background-color:#060505;}
