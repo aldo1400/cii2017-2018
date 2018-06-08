@@ -282,7 +282,7 @@ $(".delete-participant").click(deleteParticipant)
     return (n < 10) ? '0'+n : ''+n;
   }
 
-  var finalDate = new Date('11/7/2017 09:00')
+  var finalDate = new Date('11/7/2018 09:00')
 
   $('#countdown').countdown(finalDate,function(event){
     var seconds = formatTens(event.offset.seconds);

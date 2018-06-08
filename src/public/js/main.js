@@ -581,7 +581,7 @@ $(function(){
       return (n < 10) ? '0'+n : ''+n;
     }
 
-    var finalDate = new Date('11/13/2017 09:00')
+    var finalDate = new Date('11/13/2018 09:00')
 
     $('#countdown').countdown(finalDate,function(event){
       var seconds = formatTens(event.offset.seconds);
