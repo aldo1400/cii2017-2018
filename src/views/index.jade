@@ -130,6 +130,8 @@ block content
                 .campo-pre
                   p Tipo de Inscripción
                   select#preRegisterType.form-control(name='type')
+                    option(value='Estudiante') Estudiante
+                    option(value='Profesional') Profesional y público en general
                     //- each type in types
                     //-   option(value=type._id) #{type.name}
                 .campo-pre
@@ -198,12 +200,25 @@ block content
                 h2.videos-titles.scrollflow.-pop.-opacity
                   span.videos-title1 PRESENTACIÓN DEL 
                   span.videos-title2 XIX CIIS
+                //- section.scrollflow.-slide-bottom.-opacity.lazy.slider(data-sizes='50vw' style="width:83%; margin:auto;")
+                //-   //- button.slick-pre.slick-arrow(aria-label="Previous" type="button" style="display: block;") Previous
+                //-   div
+                //-     iframe.iframe-videos(src='https://www.youtube.com/embed/6bP6ouor0AY', frameborder='0', allowfullscreen='')
+                //-   div
+                //-     iframe.iframe-videos(src='https://www.youtube.com/embed/aS5bgHWPZdM?rel=0', frameborder='0', allowfullscreen='')
+
                 section
                   //- button.slick-pre.slick-arrow(aria-label="Previous" type="button" style="display: block;") Previous
-                  //- //  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                  //- iframe.iframe-videos(width='560', height='315', src='https://www.youtube.com/watch?v=6bP6ouor0AY', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
                   div
-                   
                     iframe.iframe-videos(width='560', height='315', src='https://www.youtube.com/embed/aS5bgHWPZdM?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                    //- iframe.iframe-videos(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560&hd=true', frameborder='0', allowfullscreen='')
+                  div
+                  h2.videos-titles.scrollflow.-pop.-opacity
+                    span.videos-title1 INVITACIÓN AL 
+                    span.videos-title2 XIX CIIS
+                  div
+                    iframe.iframe-videos(width='560', height='315', src='https://www.youtube.com/embed/6bP6ouor0AY', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
                     //- iframe.iframe-videos(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fciistacna%2Fvideos%2F1828586813900572%2F&show_text=0&width=560&hd=true', frameborder='0', allowfullscreen='')
                   div
       section.section.tematicos#linea-investigacion
@@ -673,8 +688,8 @@ block content
                 .campo-taller
                   p Tipo de Inscripción
                   select#tallerType.form-control
-                    option Estudiante
-                    option Profesional y público en general
+                    option(value='Estudiante') Estudiante
+                    option(value='Profesional') Profesional y público en general
                 .campo-taller
                   p Ciudad
                   input#tallerCity(name='city',type='text', required='')
@@ -691,10 +706,11 @@ block content
                     .container-cronograma
                       h2.cronograma-titles.scrollflow.-pop.-opacity
                         span.videos-title1 FERIA TECNOLOGICA
-                        span.videos-title2 CIIS 2018
+                        span.videos-title2  CIIS 2018
                         h4.cronograma-titles.scrollflow.-pop.-opacity
-                          span.videos-title1 Mas información pronto
-                          span.videos-title2 
+                          span.videos-title1 del 14 al 16 de noviembre
+                          br
+                          span.videos-title2 Más información pronto
                         //-   span Es un actviidad
                         //- h4.cronograma-titles.scrollflow.-pop.-opacity
                         //-   span.videos-title1 UBICACION
@@ -702,8 +718,8 @@ block content
                         //- h4.cronograma-titles.scrollflow.-pop.-opacity
                         //-   span.videos-title1 UBICACION
                         //-   span.videos-title2  LABORATORIO 01
-                      //- .ScrollImg
-                      //-   img.Cronograma(src='img/cronograma/Cronograma.png')
+                      .ScrollImg
+                        img.Cronograma(src='img/feria.jpg')
                       //- h4.cronograma-titles.scrollflow.-pop.-opacity
                       //-   span.videos-title1 CRONOGRAMA TALLER
                       //-   span.videos-title2  LABORATORIO 01

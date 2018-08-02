@@ -38,7 +38,7 @@ img.Pais{width:64px;height:44px;border-radius:0px;border:none;box-shadow:0 0 0px
 .Paises3{margin-left:30px;}
 h2.cronograma-titles.scrollflow.-pop.-opacity{margin-top:60px;}
 img.Cronograma{margin-top:30px;width:1201px;border:10px outset #cccccc;background-color:#cccccc;}
-section#cronograma{height:500px;background:#005E77;}
+section#cronograma{height:1200px;background:#005E77;}
 .ScrollImg{width:95%;margin:auto;}
 @media (max-width:1250px){.ScrollImg{overflow-x:scroll;}
 }
